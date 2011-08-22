@@ -1,6 +1,3 @@
-class Employee < ActiveRecord::Base
-end
-
 # == Schema Information
 #
 # Table name: employees
@@ -15,4 +12,13 @@ end
 #  created_at :datetime
 #  updated_at :datetime
 #
+
+class Employee < ActiveRecord::Base
+  validates_presence_of :firstname, :lastname, :title, :department, :extension, :mobile
+  validates_numericality_of :extension
+  validates_length_of :extension, :is => 4
+  validates_uniqueness_of :mobile, :extension
+end
+
+
 
