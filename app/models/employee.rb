@@ -18,6 +18,15 @@ class Employee < ActiveRecord::Base
   validates_numericality_of :extension
   validates_length_of :extension, :is => 4
   validates_uniqueness_of :mobile, :extension
+  
+  def self.search(search)
+    if search
+      where('firstname LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+  
 end
 
 
