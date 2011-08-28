@@ -1,0 +1,20 @@
+%table
+	%tr
+		%th Firstname
+		%th Lastname
+		%th Title
+		%th Department
+		%th Extension
+		%th Mobile
+	-@employees.each do |employee|
+		%tr
+			%td= employee.firstname 
+			%td= employee.lastname
+			%td= employee.title 
+			%td= employee.department 
+			%td= employee.extension
+			%td= employee.mobile
+			%td= link_to 'Show', employee
+			%td= link_to 'Edit', edit_employee_path(employee)
+			%td= link_to 'Destroy', employee, :confirm => "Are you sure?", :method => :delete
+= will_paginate @employees
