@@ -19,14 +19,10 @@ class Employee < ActiveRecord::Base
   validates_length_of :extension, :is => 4
   validates_uniqueness_of :mobile, :extension
   
-  def self.search(search)
-    if search
-      where('firstname LIKE ?', "%#{search}%")
-    else
-      scoped
-    end
-  end
-  
+  scope :search_by_all_fields, lambda { |q|
+    (q ? where(["firstname LIKE ? or lastname LIKE ? or title LIKE ? or department LIKE ? or extension LIKE ? or mobile LIKE ?", '%'+ q + '%', '%'+ q + '%', '%'+ q + '%', '%'+ q + '%', '%'+ q + '%', '%'+ q + '%'])  : {})
+  }  
+
 end
 
 
