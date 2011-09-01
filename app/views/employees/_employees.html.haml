@@ -16,5 +16,5 @@
 			%td= employee.mobile
 			%td= link_to 'Show', employee
 			%td= link_to 'Edit', edit_employee_path(employee)
-			%td= link_to 'Destroy', employee, :confirm => "Are you sure?", :method => :delete
+			%td= link_to 'Destroy', employee, :confirm => t('default.are_you_sure'), :method => :delete
 = will_paginate @employees
