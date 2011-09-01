@@ -1,6 +1,10 @@
 Elenco::Application.routes.draw do
-  resources :employees
-
+  
+  # includes the locale parameter in the url structure
+  scope "/:locale" do
+    resources :employees
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

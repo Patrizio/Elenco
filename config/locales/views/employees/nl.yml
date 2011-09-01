@@ -1,0 +1,6 @@
+# Dutch translation for view: defaults
+
+nl:
+    activerecord:
+        models:
+            employee: "Medewerker"
