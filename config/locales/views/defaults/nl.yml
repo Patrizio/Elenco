@@ -1,0 +1,10 @@
+# Dutch translation for view: employees
+
+nl:
+    employees:
+        firstname: "Voornaam"
+        lastname: "Achternaam"
+        title: "Functie"
+        department: "Afdeling"
+        extension: "Extensie"
+        mobile: "Mobiel"

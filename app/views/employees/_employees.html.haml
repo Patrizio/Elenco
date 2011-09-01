@@ -1,11 +1,11 @@
 %table
 	%tr
-		%th= t("firstname")
-		%th Lastname
-		%th Title
-		%th Department
-		%th Extension
-		%th Mobile
+		%th= t("employees.firstname")
+		%th= t("employees.lastname")
+		%th= t("employees.title")
+		%th= t("employees.department")
+		%th= t("employees.extension")
+		%th= t("employees.mobile")
 	-@employees.each do |employee|
 		%tr
 			%td= employee.firstname 
