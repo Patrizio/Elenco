@@ -1,7 +1,4 @@
 # Dutch translation for view: defaults
 
 nl:
-    activerecord:
-        models:
-            employee: "Medewerker"
-            firstname: "Voornaam"
+    firstname: "Voornaam"
