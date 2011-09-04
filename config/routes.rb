@@ -1,5 +1,9 @@
 Elenco::Application.routes.draw do
   
+  # define default route
+  match '/:locale' => "employees#index"
+  root :to => "employees#index"
+  
   # includes the locale parameter in the url structure
   scope "/:locale" do
     resources :employees
