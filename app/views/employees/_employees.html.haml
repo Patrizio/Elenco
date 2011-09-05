@@ -1,20 +1,12 @@
 %table
 	%tr
-		%th= t("employees.firstname")
 		%th= t("employees.lastname")
-		%th= t("employees.title")
-		%th= t("employees.department")
+		%th= t("employees.firstname")
 		%th= t("employees.extension")
-		%th= t("employees.mobile")
 	-@employees.each do |employee|
 		%tr
-			%td= employee.firstname 
 			%td= employee.lastname
-			%td= employee.title 
-			%td= employee.department 
+			%td= employee.firstname 
 			%td= employee.extension
-			%td= employee.mobile
-			%td= link_to 'Show', employee
-			%td= link_to 'Edit', edit_employee_path(employee)
-			%td= link_to 'Destroy', employee, :confirm => "Are you sure?", :method => :delete
+			%td= link_to_box 'More', employee_path(employee)
 = will_paginate @employees
