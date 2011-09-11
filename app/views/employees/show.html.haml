@@ -1,28 +1,30 @@
 %p#notice=notice
 
-%p
-	%b= t('employees.firstname')
-	= @employee.firstname
+%table
 
-%p
-	%b= t('employees.lastname')
-	= @employee.lastname
+	%tr
+		%td.field_label= t('employees.firstname').downcase
+		%td= @employee.firstname
 
-%p
-	%b= t('employees.title')
-	= @employee.title
+	%tr
+		%td.field_label= t('employees.lastname').downcase
+		%td= @employee.lastname
 
-%p
-	%b= t('employees.department')
-	= @employee.department
+	%tr
+		%td.field_label= t('employees.title').downcase
+		%td= @employee.title
 
-%p
-	%b= t('employees.extension')
-	= @employee.extension
+	%tr
+		%td.field_label= t('employees.department').downcase
+		%td= @employee.department
 
-%p
-	%b= t('employees.mobile')
-	= @employee.mobile
+	%tr
+		%td.field_label= t('employees.extension').downcase
+		%td= @employee.extension
+
+	%tr
+		%td.field_label= t('employees.mobile').downcase
+		%td= @employee.mobile
 
 %p
 	= link_to 'Edit', edit_employee_path(@employee)

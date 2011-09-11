@@ -1,17 +1,19 @@
-
 a.employee-details {
 	text-decoration: none;
 }
 
+td.field_label {
+	color: grey;
+	text-align: right;
+}
+
 .employee {
-	background: white;
+	font-size: 1.2em;
 	color: black;
 	height: 20px;
 	border-bottom: 1px dotted lightgrey;
 }
 
-
 .extension {
-	background: lightgrey;
-
+	color: grey;
 }
