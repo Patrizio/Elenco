@@ -23,6 +23,10 @@ class Employee < ActiveRecord::Base
     (q ? where(["firstname LIKE ? or lastname LIKE ?", '%'+ q + '%', '%'+ q + '%'])  : {})
   }  
 
+  def fullname
+    [firstname, lastname].join(' ')
+  end
+  
 end
 
 
