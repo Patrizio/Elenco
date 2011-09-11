@@ -10,6 +10,7 @@ gem 'annotate'
 gem 'haml'
 gem 'will_paginate', '~> 3.0.0'
 gem 'jquery-rails'
+gem 'paperclip', '~> 2.4'
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -3,28 +3,24 @@
 %table
 
 	%tr
+		%td= image_tag @employee.avatar.url(:medium)
+	%tr
 		%td.field_label= t('employees.firstname').downcase
 		%td= @employee.firstname
-
 	%tr
 		%td.field_label= t('employees.lastname').downcase
 		%td= @employee.lastname
-
 	%tr
 		%td.field_label= t('employees.title').downcase
 		%td= @employee.title
-
 	%tr
 		%td.field_label= t('employees.department').downcase
 		%td= @employee.department
-
 	%tr
 		%td.field_label= t('employees.extension').downcase
 		%td= @employee.extension
-
 	%tr
 		%td.field_label= t('employees.mobile').downcase
 		%td= @employee.mobile
-
 %p
 	= link_to 'Edit', edit_employee_path(@employee)

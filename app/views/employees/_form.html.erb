@@ -1,4 +1,4 @@
-<%= form_for(@employee) do |f| %>
+<%= form_for @employee, :html => { :multipart => true } do |f| %>
   <% if @employee.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
@@ -35,6 +35,10 @@
     <%= f.label t("employees.mobile") %><br />
     <%= f.text_field :mobile %>
   </div>
+  <div>
+	<%= f.file_field :avatar%>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
