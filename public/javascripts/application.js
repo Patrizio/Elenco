@@ -3,7 +3,12 @@ $(document).ready(function () {
     	ev.preventDefault();
     	$.fancybox({
         	type: "iframe",
-			href: this
+			href: this,
+			'transitionIn'	:	'elastic',
+			'transitionOut'	:	'elastic',
+			'speedIn'		:	100, 
+			'speedOut'		:	100, 
+			'overlayShow'	:	true
     	})
 	});
 });
