@@ -1,12 +1,12 @@
 %table
 	%tr
-		%th= t("employees.lastname")
 		%th= t("employees.firstname")
+		%th= t("employees.lastname")
 		%th= t("employees.extension")
 	-@employees.each do |employee|
 		%tr
-			%td= employee.lastname
-			%td= employee.firstname 
+			%td= employee.firstname
+			%td= employee.lastname 
 			%td= employee.extension
 			%td= link_to_box 'More', employee_path(employee)
 = will_paginate @employees
