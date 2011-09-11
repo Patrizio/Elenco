@@ -19,6 +19,8 @@ class Employee < ActiveRecord::Base
   validates_length_of :extension, :is => 4
   validates_uniqueness_of :extension,:mobile, :allow_blank => true
   
+  default_scope :order => 'lastname'
+  
   scope :search_significant_fields, lambda { |q|
     (q ? where(["firstname LIKE ? or lastname LIKE ?", '%'+ q + '%', '%'+ q + '%'])  : {})
   }  
