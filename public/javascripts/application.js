@@ -6,7 +6,7 @@ $(document).ready(function () {
 			href: this,
 			'transitionIn'	:	'elastic',
 			'transitionOut'	:	'elastic',
-			'speedIn'		:	100, 
+			'speedIn'		:	150, 
 			'speedOut'		:	100, 
 			'overlayShow'	:	true
     	})
