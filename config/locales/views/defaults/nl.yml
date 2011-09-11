@@ -5,6 +5,8 @@ nl:
         previous_label: "vorige"
         next_label: "Volgende"
     
+    search_label: "Zoeken"
+    
     employees:
         firstname: "Voornaam"
         lastname: "Achternaam"
