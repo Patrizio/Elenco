@@ -1,6 +1,5 @@
 -@employees.each do |employee|
 	%div.employee
-		%span#name= employee.fullname
-		%span#extention=employee.extension
-		%span#more= link_to 'blah', employee_path(employee), :class => "employee-details"
+		%span.name= link_to employee.fullname, employee_path(employee), :class => "employee-details"
+		%span.extension=employee.extension
 = will_paginate @employees

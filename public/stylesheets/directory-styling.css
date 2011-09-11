@@ -1,6 +1,17 @@
+
+a.employee-details {
+	text-decoration: none;
+}
+
 .employee {
 	background: white;
 	color: black;
 	height: 20px;
 	border-bottom: 1px dotted lightgrey;
+}
+
+
+.extension {
+	background: lightgrey;
+
 }
