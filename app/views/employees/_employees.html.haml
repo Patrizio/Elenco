@@ -1,13 +1,6 @@
-%table
-	%tr
-		%th= t("employees.firstname")
-		%th= t("employees.lastname")
-		%th= t("employees.extension")
-		%th meer
-	-@employees.each do |employee|
-		%tr
-			%td= employee.firstname
-			%td= employee.lastname 
-			%td= employee.extension
-			%td= link_to 'meer', employee_path(employee), :class => "employee"
+-@employees.each do |employee|
+	%div.employee
+		%span#name= employee.fullname
+		%span#extention=employee.extension
+		%span#more= link_to 'blah', employee_path(employee), :class => "employee-details"
 = will_paginate @employees

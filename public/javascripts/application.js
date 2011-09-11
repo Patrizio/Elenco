@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$("a.employee").live("click",function(ev){
+	$("a.employee-details").live("click",function(ev){
     	ev.preventDefault();
     	$.fancybox({
         	type: "iframe",
