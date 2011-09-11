@@ -1,6 +1,10 @@
 # Dutch translation for view: employees
 
 nl:
+    will_paginate:
+        previous_label: "vorige"
+        next_label: "Volgende"
+    
     employees:
         firstname: "Voornaam"
         lastname: "Achternaam"
