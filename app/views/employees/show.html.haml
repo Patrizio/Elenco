@@ -1,0 +1,28 @@
+%p#notice=notice
+
+%p
+	%b= t('employees.firstname')
+	= @employee.firstname
+
+%p
+	%b= t('employees.lastname')
+	= @employee.lastname
+
+%p
+	%b= t('employees.title')
+	= @employee.title
+
+%p
+	%b= t('employees.department')
+	= @employee.department
+
+%p
+	%b= t('employees.extension')
+	= @employee.extension
+
+%p
+	%b= t('employees.mobile')
+	= @employee.mobile
+
+%p
+	= link_to 'Edit', edit_employee_path(@employee)
