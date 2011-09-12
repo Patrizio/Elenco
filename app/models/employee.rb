@@ -19,7 +19,7 @@ class Employee < ActiveRecord::Base
   validates_length_of :extension, :is => 4
   validates_uniqueness_of :extension,:mobile, :allow_blank => true
   
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" } 
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :small => "200x200", :thumb => "100x100>" } 
   
   default_scope :order => 'lastname'
   
