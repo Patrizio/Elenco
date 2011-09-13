@@ -28,7 +28,7 @@ class Employee < ActiveRecord::Base
   default_scope :order => 'lastname'
   
   scope :search_significant_fields, lambda { |q|
-    (q ? where(["firstname LIKE ? or lastname LIKE ?", '%'+ q + '%', '%'+ q + '%'])  : {})
+    (q ? where(["firstname LIKE ? or lastname LIKE ? or department LIKE ?", '%'+ q + '%', '%'+ q + '%', '%'+ q + '%'])  : {})
   }  
 
   # Virtual attribute to obtain the Employees fullname
