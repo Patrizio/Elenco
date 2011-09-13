@@ -1,5 +1,12 @@
 a.employee-details {
 	text-decoration: none;
+	display:block;
+	font-size: .9em;
+	color: black;
+}
+a.employee-details:hover {
+	background: lightyellow;
+	color: black;	
 }
 
 td.field_label {
@@ -8,13 +15,17 @@ td.field_label {
 }
 
 .employee {
-	font-size: 1em;
-	padding: 1px 0 1px 0;
-	color: black;
-	height: 20px;
 	border-bottom: 1px dotted lightgrey;
+	padding: 0 0 0 0;
+	margin: 1px 1px 1px 1px;
+}
+.extension {
+	color: purple;
+	font-size: .75em;
+	font-weight: bold;
 }
 
-.extension {
-	color: grey;
+.department {
+	color: purple;
+	font-size: .75em;
 }
