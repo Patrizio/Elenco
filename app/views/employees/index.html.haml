@@ -3,7 +3,7 @@
 
 = form_tag employees_path, :method => 'get', :id => "employees_search" do
 	%p
-		= text_field_tag :search, params[:search], :type => 'search', :placeholder => "Type naam..."
+		= text_field_tag :search, params[:search], :type => 'search', :placeholder => "Zoek op naam..."
 		= submit_tag t(:search_label), :name => nil
 
 %div#employees
