@@ -2,8 +2,8 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.xml
   def index
-    @employees = Employee.search_significant_fields(params[:search]).paginate(:page => params[:page], :per_page => 15)
-
+    @employees = Employee.search_significant_fields(params[:search])
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @employees }
