@@ -8,7 +8,8 @@ $(document).ready(function () {
 			'transitionOut'	:	'elastic',
 			'speedIn'		:	150, 
 			'speedOut'		:	100, 
-			'overlayShow'	:	true
+			'overlayShow'	:	true,
+			'height'		: 	450
     	})
 	});
 });
