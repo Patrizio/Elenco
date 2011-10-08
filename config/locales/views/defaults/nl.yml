@@ -11,7 +11,12 @@ nl:
     employees:
         firstname: "Voornaam"
         lastname: "Achternaam"
+        fullname: "Naam"
         title: "Functie"
         department: "Afdeling"
-        extension: "Extensie"
+        extension: "Telefoon"
         mobile: "Mobiel"
+        email: "E-mail"
+        contact-title: "Contact"
+        profile-title: "Profiel"
+        skills-title: "Skills"

@@ -1,27 +1,39 @@
 %p#notice=notice
 
-%table
+#profile
 
-	%tr
-		%td= image_tag @employee.avatar.url(:thumb)
-	%tr
-		%td.field_label= t('employees.firstname').downcase
-		%td= @employee.firstname
-	%tr
-		%td.field_label= t('employees.lastname').downcase
-		%td= @employee.lastname
-	%tr
-		%td.field_label= t('employees.title').downcase
-		%td= @employee.title
-	%tr
-		%td.field_label= t('employees.department').downcase
-		%td= @employee.department
-	%tr
-		%td.field_label= t('employees.extension').downcase
-		%td= @employee.extension
-	%tr
-		%td.field_label= t('employees.mobile').downcase
-		%td= @employee.mobile
+	#profile-header
+		%span#profile-picture
+			= image_tag @employee.avatar.url(:thumb)
+		%h1= @employee.fullname
+		%span#title
+			= @employee.department
+			>
+			= @employee.title.capitalize
+	
+	#profile-body
+		.chapter
+			%h2= t('employees.contact-title')
+			.detail
+				%span.key
+					= t('employees.extension').downcase
+				%span.value
+					= @employee.extension
+			.detail
+				%span.key
+					= t('employees.mobile').downcase
+				%span.value
+					= @employee.mobile
+			.detail
+				%span.key
+					= t('employees.email').downcase
+				%span.value
+					= @employee.extension
+		.chapter
+			%h2= t('employees.profile-title')
+		.chapter
+			%h2= t('employees.skills-title')
+		
 %p
 	%span
 		= link_to 'Edit', edit_employee_path(@employee)

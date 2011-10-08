@@ -20,12 +20,59 @@ td.field_label {
 	margin: 1px 1px 1px 1px;
 }
 .extension {
-	color: purple;
+	color: darkorange;
 	font-size: .75em;
 	font-weight: bold;
 }
 
 .department {
-	color: purple;
+	color: darkorange;
 	font-size: .75em;
+}
+
+
+#profile {
+	color: darkorange;
+	font-size: 1.5em;
+}
+
+#profile-header {
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+#profile-picture {
+}
+#profile h1 {
+	padding-bottom: 15px;
+	margin-bottom: 7px;
+	border-bottom: 2px dotted grey;
+	
+}
+#profile #title {
+	color: grey;
+}
+#profile h2 {
+	color: darkorange;
+	text-align: right;
+	font-size: 1em;
+	padding-bottom: 0px;
+	margin-bottom: 5px;
+	border-bottom: 1px dotted grey;
+}
+#profile-body {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.chapter {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.detail {
+	font-size: 1em;
+	padding-bottom: 5px;
+}
+.key {
+	color: lightgrey;
+}
+.value {
 }
