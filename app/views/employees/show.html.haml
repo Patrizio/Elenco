@@ -3,7 +3,7 @@
 %table
 
 	%tr
-		%td= image_tag @employee.avatar.url(:small)
+		%td= image_tag @employee.avatar.url(:thumb)
 	%tr
 		%td.field_label= t('employees.firstname').downcase
 		%td= @employee.firstname
