@@ -1,7 +1,12 @@
+#search {
+	font-size: 1.3em;
+	padding: 2px 2px 2px 2px;
+}
+
 a.employee-details {
 	text-decoration: none;
 	display:block;
-	font-size: 1em;
+	font-size: 1.25em;
 	color: black;
 }
 a.employee-details:hover {
