@@ -25,7 +25,7 @@ class Employee < ActiveRecord::Base
   
   has_attached_file :avatar, :styles => { :medium => "300x300>", :small => "200x200", :thumb => "100x100>" } 
   
-  default_scope :order => 'lastname'
+  default_scope :order => 'extension'
   
   scope :search_significant_fields, lambda { |q|
     (q ? where(["firstname LIKE ? or lastname LIKE ? or department LIKE ?", '%'+ q + '%', '%'+ q + '%', '%'+ q + '%'])  : {})
