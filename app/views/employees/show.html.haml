@@ -23,4 +23,7 @@
 		%td.field_label= t('employees.mobile').downcase
 		%td= @employee.mobile
 %p
-	= link_to 'Edit', edit_employee_path(@employee)
+	%span
+		= link_to 'Edit', edit_employee_path(@employee)
+		|
+		= link_to 'Destroy', @employee, :confirm => 'Are you sure?', :method => :delete
