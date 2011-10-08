@@ -6,7 +6,7 @@ nl:
         next_label: "Volgende"
     
     search_label: "Zoeken"
-    placeholder_label: "Zoek op naam..."
+    placeholder_label: "Naam, afdeling of skill..."
     
     employees:
         firstname: "Voornaam"
