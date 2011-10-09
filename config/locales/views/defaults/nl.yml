@@ -1,9 +1,6 @@
 # Dutch translation for view: employees
 
 nl:
-    will_paginate:
-        previous_label: "vorige"
-        next_label: "Volgende"
     placeholder_label: "Zoek Medewerker..."
     employees:
         firstname: "Voornaam"
