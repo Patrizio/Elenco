@@ -4,7 +4,7 @@ nl:
     will_paginate:
         previous_label: "vorige"
         next_label: "Volgende"
-    placeholder_label: "Zoek medewerker..."
+    placeholder_label: "Zoek Medewerker..."
     employees:
         firstname: "Voornaam"
         lastname: "Achternaam"
