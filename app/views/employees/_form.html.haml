@@ -1,0 +1,30 @@
+= form_for @employee, :html => { :multipart => true } do |f|
+	- if @employee.errors.any?
+		#error_explanation
+			%h2= "#{pluralize(@employee.errors.count, "error")} prohibited this employee from being saved: "
+
+			%ul
+			- @employee.errors.full_messages.each do |msg|
+				%li= msg
+	.field
+		= f.label t("employees.firstname")
+		= f.text_field :firstname
+	.field
+		= f.label t("employees.lastname")
+		= f.text_field :lastname
+	.field
+		= f.label t("employees.title")
+		= f.text_field :title
+	.field
+		= f.label t("employees.department")
+		= f.text_field :department
+	.field
+		= f.label t("employees.extension")
+		= f.text_field :extension
+	.field
+		= f.label t("employees.mobile")
+		= f.text_field :mobile
+	.field
+		= f.file_field :avatar
+	.actions
+		= f.submit
