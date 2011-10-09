@@ -1,0 +1,84 @@
+#search {
+	font-size: 1.3em;
+	padding: 2px 2px 2px 2px;
+	min-width: 170px;
+}
+
+a.employee-details {
+	text-decoration: none;
+	display:block;
+	font-size: 1.25em;
+	color: black;
+}
+a.employee-details:hover {
+	background: lightyellow;
+	color: black;	
+}
+
+td.field_label {
+	color: grey;
+	text-align: right;
+}
+
+.employee {
+	border-bottom: 1px dotted lightgrey;
+	padding: 0 0 0 0;
+	margin: 1px 1px 1px 1px;
+}
+.extension {
+	color: darkorange;
+	font-size: .75em;
+	font-weight: bold;
+}
+
+.department {
+	color: darkorange;
+	font-size: .75em;
+}
+
+
+#profile {
+	color: darkorange;
+	font-size: 1.5em;
+}
+
+#profile-header {
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+#profile-picture {
+}
+#profile h1 {
+	padding-bottom: 15px;
+	margin-bottom: 7px;
+	border-bottom: 2px dotted grey;
+	
+}
+#profile #title {
+	color: grey;
+}
+#profile h2 {
+	color: darkorange;
+	text-align: right;
+	font-size: 1em;
+	padding-bottom: 0px;
+	margin-bottom: 5px;
+	border-bottom: 1px dotted grey;
+}
+#profile-body {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.chapter {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.detail {
+	font-size: 1em;
+	padding-bottom: 5px;
+}
+.key {
+	color: lightgrey;
+}
+.value {
+}
