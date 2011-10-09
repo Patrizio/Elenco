@@ -1,6 +1,8 @@
 # Dutch translation for view: employees
 
 nl:
+    back: "Terug"
+    
     placeholder_label: "Zoek Medewerker..."
     employees:
         firstname: "Voornaam"
@@ -16,3 +18,4 @@ nl:
         skills-title: "Skills"
         edit-profile: "Bewerk profiel"
         delete-profile: "Verwijder profiel"
+        new-profile: "Nieuw profiel"
