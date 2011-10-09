@@ -4,10 +4,7 @@ nl:
     will_paginate:
         previous_label: "vorige"
         next_label: "Volgende"
-    
-    search_label: "Zoeken"
     placeholder_label: "Zoek medewerker..."
-    
     employees:
         firstname: "Voornaam"
         lastname: "Achternaam"
