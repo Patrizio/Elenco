@@ -44,6 +44,7 @@ namespace :deploy do
   end
 
   after "deploy:update_code", :link_production_db
+  # Run bundle install 
   after "deploy:finalize_update", "bundle:install"
 end
 
