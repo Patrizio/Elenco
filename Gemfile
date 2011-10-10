@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'paperclip', '~> 2.4'
 gem 'therubyracer'
 gem 'execjs'
+gem 'rack' , '1.3.3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
