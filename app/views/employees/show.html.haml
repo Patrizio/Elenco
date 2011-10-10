@@ -4,7 +4,7 @@
 
 	#profile-header
 		%span#profile-picture
-			= image_tag @employee.avatar.url(:thumb)
+			= image_tag @employee.avatar.url(:small)
 		%h1= @employee.fullname
 		%span#title
 			= @employee.department
