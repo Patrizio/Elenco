@@ -28,6 +28,11 @@ class Employee < ActiveRecord::Base
   # Each employee has a profile picture
   has_attached_file :avatar, :styles => { :medium => "300x300>", :small => "200x200", :thumb => "100x100>" } 
   
+  # Ensure a picture is being submitted
+  validates_attachment_presence(:avatar)
+  validates_attachment_size :avatar, :less_than => 5.megabytes  
+  validates_attachment_content_type :avatar, :content_type => ['image/jpeg']
+  
   # The default way items are ordered/presented
   default_scope :order => 'extension'
   
