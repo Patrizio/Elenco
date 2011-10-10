@@ -9,8 +9,6 @@ gem 'sqlite3'
 gem 'haml'
 gem 'jquery-rails'
 gem 'paperclip', '~> 2.4'
-gem 'therubyracer'
-gem 'execjs'
 gem 'rack' , '1.3.3'
 
 # Use unicorn as the web server
@@ -34,4 +32,9 @@ gem 'capistrano'
 # and rake tasks are available in development mode:
 group :development, :test do
 	gem 'annotate'
+end
+
+group :production do
+  gem 'execjs'
+  gem 'therubyracer'
 end

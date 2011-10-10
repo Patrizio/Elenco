@@ -44,6 +44,7 @@ namespace :deploy do
   end
 
   after "deploy:update_code", :link_production_db
+  after "deploy:finalize_update", "bundle:install"
 end
 
 desc "Link database.yml from shared path"
