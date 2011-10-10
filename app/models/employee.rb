@@ -29,7 +29,7 @@ class Employee < ActiveRecord::Base
   validates_uniqueness_of :extension,:mobile, :allow_blank => true
   
   # Each employee has a profile picture
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :small => "200x200", :thumb => "100x100>" } 
+  has_attached_file :avatar, :styles => { :small => "200x200" } 
   
   # Ensure a picture is being submitted
   # validates_attachment_presence(:avatar)
