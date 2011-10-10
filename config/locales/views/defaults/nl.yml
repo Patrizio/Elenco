@@ -2,8 +2,10 @@
 
 nl:
     back: "Terug"
+    click-4-details: "Klik voor details"
     
     placeholder_label: "Zoek Medewerker..."
+    
     employees:
         firstname: "Voornaam"
         lastname: "Achternaam"
