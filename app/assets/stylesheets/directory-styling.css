@@ -12,8 +12,8 @@ a.employee-details {
 }
 a.employee-details:hover {
 	background: lightyellow;
-	color: black;	
-}
+	color: black;
+} 
 
 td.field_label {
 	color: grey;
@@ -30,7 +30,6 @@ td.field_label {
 	font-size: .75em;
 	font-weight: bold;
 }
-
 .department {
 	color: darkorange;
 	font-size: .75em;
@@ -78,7 +77,5 @@ td.field_label {
 	padding-bottom: 5px;
 }
 .key {
-	color: lightgrey;
-}
-.value {
+	color: grey;
 }
