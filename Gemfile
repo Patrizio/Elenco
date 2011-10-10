@@ -37,5 +37,5 @@ end
 group :production do
   gem 'execjs'
   gem 'therubyracer'
-  gem 'mysql2'
+  gem 'mysql2', '0.3.2'
 end
