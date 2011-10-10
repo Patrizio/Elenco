@@ -1,6 +1,6 @@
 -@employees.each do |employee|
 	%div.employee
-		%span.name
+		.name
 			= link_to employee.fullname, employee_path(employee), :class => "employee-details"
 		%span.extension
 			=employee.extension

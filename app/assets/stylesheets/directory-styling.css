@@ -11,8 +11,8 @@ a.employee-details {
 	color: black;
 }
 a.employee-details:hover {
-	background: lightyellow;
-	color: black;
+	background: darkorange;
+	color: white;
 } 
 
 td.field_label {
@@ -22,13 +22,15 @@ td.field_label {
 
 .employee {
 	border-bottom: 1px dotted lightgrey;
-	padding: 0 0 0 0;
-	margin: 1px 1px 1px 1px;
+	margin: 0px 0px 0px 0px;
+}
+.name {
 }
 .extension {
 	color: darkorange;
 	font-size: .75em;
 	font-weight: bold;
+	
 }
 .department {
 	color: darkorange;
