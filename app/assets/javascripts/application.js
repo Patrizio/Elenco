@@ -17,10 +17,10 @@ $(document).ready(function () {
 			href: this,
 			'transitionIn'	:	'elastic',
 			'transitionOut'	:	'elastic',
-			'speedIn'		:	150, 
-			'speedOut'		:	100, 
+			'speedIn'		:	10, 
+			'speedOut'		:	10, 
 			'overlayShow'	:	true,
-			'height'		: 	450
+			'height'		: 	600
     	})
 	});
 });
