@@ -7,7 +7,7 @@ nl:
   gender:
       male: "man"
       female: "vrouw"
-      
+  
             
   date:
     formats:
@@ -189,3 +189,7 @@ nl:
 
       full_messages:
         format: "%{attribute}%{message}"
+    notice:
+        create: "%{model} succesvol aangemaakt."
+        update: "%{model} succesvol opgeslagen."
+        
