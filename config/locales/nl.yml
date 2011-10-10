@@ -7,7 +7,7 @@ nl:
   gender:
       male: "man"
       female: "vrouw"
-  
+  ask-for-confirmation: "Weet je het zeker?"
             
   date:
     formats:
