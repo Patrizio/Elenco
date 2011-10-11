@@ -46,4 +46,5 @@ group :production do
   gem 'execjs'
   gem 'therubyracer'
   gem 'mysql2', '~> 0.3.7'
+  gem 'rack-google_analytics'
 end
