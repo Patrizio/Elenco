@@ -1,3 +1,13 @@
+#home-banner { 
+	background-color: #fff; 
+	color: #666; text-align: right;
+	margin: 100px 100px 100px 100px; 
+}
+#home-text { 
+	text-align: left;
+}
+
+
 #search {
 	font-size: 1em;
 	padding: 2px 2px 2px 2px;
