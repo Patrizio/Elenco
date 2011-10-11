@@ -1,13 +1,16 @@
 Elenco::Application.routes.draw do
   
+  get "pages/home"
+  
   # define default route
   match '/:locale' => "employees#index"
-  root :to => "employees#index"
+  root :to => "pages#home"
   
   # includes the locale parameter in the url structure
   scope "/:locale" do
     resources :employees
   end
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
