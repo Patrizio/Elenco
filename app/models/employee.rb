@@ -31,6 +31,9 @@ class Employee < ActiveRecord::Base
   # Each employee has a profile picture
   has_attached_file :avatar, :styles => { :small => "200x200" } 
   
+  # Allow each employee to have tags of their skills
+  acts_as_taggable_on :skills
+  
   # Ensure a picture is being submitted
   # validates_attachment_presence(:avatar)
   # validates_attachment_size :avatar, :less_than => 5.megabytes  
