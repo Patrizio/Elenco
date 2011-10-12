@@ -30,9 +30,12 @@
 				%span.value
 					= @employee.extension
 		.chapter
-			%h2= t('employees.profile-title')
-		.chapter
-			%h2= t('employees.skills-title')
+			%h2= t('employees.skills')
+			.detail
+				- @employee.skills.each do |skill|
+					%span.value
+					= skill
+					|
 		
 %p
 	%span

@@ -17,7 +17,7 @@ nl:
         email: "E-mail"
         contact-title: "Contact"
         profile-title: "Profiel"
-        skills-title: "Skills"
+        skills: "Skills"
         edit-profile: "Bewerk profiel"
         delete-profile: "Verwijder profiel"
         new-profile: "Nieuw profiel"
