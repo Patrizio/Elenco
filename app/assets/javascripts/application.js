@@ -10,16 +10,16 @@
 //= require_tree .
 
 $(document).ready(function () {
-	$("a.employee-details").live("click",function(ev){
+	$(".employee").live("click",function(ev){
     	ev.preventDefault();
     	$.fancybox({
         	type: "iframe",
-			href: this,
+			href: $('a.employee-details').attr('href'),
 			'transitionIn'	:	'elastic',
 			'transitionOut'	:	'elastic',
 			'speedIn'		:	10, 
 			'speedOut'		:	10, 
-			'overlayShow'	:	true,
+			'overlayShow'	:	false,
 			'height'		: 	600
     	})
 	});
@@ -31,3 +31,4 @@ $(function() {
 		return false;
 	});
 });
+
