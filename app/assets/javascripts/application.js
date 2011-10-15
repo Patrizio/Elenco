@@ -19,7 +19,7 @@ $(document).ready(function () {
 			'transitionOut'	:	'elastic',
 			'speedIn'		:	10, 
 			'speedOut'		:	10, 
-			'overlayShow'	:	false,
+			'overlayShow'	:	true,
 			'height'		: 	600
     	})
 	});
