@@ -31,6 +31,9 @@ class Employee < ActiveRecord::Base
   # Each employee has a profile picture
   has_attached_file :avatar, :styles => { :small => "200x200" } 
   
+  # Allow each employee to have tags of their skills
+  acts_as_taggable_on :skills
+  
   # Ensure a picture is being submitted
   # validates_attachment_presence(:avatar)
   # validates_attachment_size :avatar, :less_than => 5.megabytes  
@@ -40,8 +43,9 @@ class Employee < ActiveRecord::Base
   default_scope :order => 'extension'
   
   # Live search is performed on the columns specified here
+  # questionmark operator indicates the ternary operator (IF-ELSE)
   scope :search_significant_fields, lambda { |q|
-    (q ? where(["firstname LIKE ? or lastname LIKE ? or department LIKE ?", '%'+ q + '%', '%'+ q + '%', '%'+ q + '%'])  : {})
+    (q ? where(["firstname LIKE ? or lastname LIKE ? or department LIKE ?", '%'+ q + '%', '%'+ q + '%', '%'+ q + '%']) | tagged_with('%' + q + '%'): {})
   }  
 
   # Virtual attribute to obtain a fullname

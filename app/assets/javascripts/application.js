@@ -10,11 +10,11 @@
 //= require_tree .
 
 $(document).ready(function () {
-	$("a.employee-details").live("click",function(ev){
+	$(".employee").live("click",function(ev){
     	ev.preventDefault();
     	$.fancybox({
         	type: "iframe",
-			href: this,
+			href: $(this).find('.employee-details').attr('href'),
 			'transitionIn'	:	'elastic',
 			'transitionOut'	:	'elastic',
 			'speedIn'		:	10, 
@@ -31,3 +31,4 @@ $(function() {
 		return false;
 	});
 });
+

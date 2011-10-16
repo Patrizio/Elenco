@@ -14,38 +14,44 @@
 	min-width: 170px;
 }
 
-a.employee-details {
-	text-decoration: none;
-	display:block;
-	font-size: 1em;
+.employee {
+	border-bottom: 1px dotted lightgrey;
+	margin: 0px 0px 0px 0px;
 	color: black;
 }
-a.employee-details:hover {
+.employee:hover {
 	background: darkorange;
 	color: white;
-} 
-
+}
+a.employee-details {
+	text-decoration: none;
+	font-size: 1em;
+	color: black;
+	display: block;
+}
+a.employee-details:hover {
+	color: white;
+}
+.name {
+	padding-left: 3px;
+	display: block;
+	
+}
+.name:hover {
+	
+}
+.extension {
+	padding-left: 3px;
+	font-size: .75em;
+	font-weight: bold;
+}
+.department {
+	font-size: .75em;
+}
 td.field_label {
 	color: grey;
 	text-align: right;
 }
-
-.employee {
-	border-bottom: 1px dotted lightgrey;
-	margin: 0px 0px 0px 0px;
-}
-.name {
-}
-.extension {
-	color: darkorange;
-	font-size: .75em;
-	font-weight: bold;	
-}
-.department {
-	color: darkorange;
-	font-size: .75em;
-}
-
 
 #profile {
 	color: darkorange;
