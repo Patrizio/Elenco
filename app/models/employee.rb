@@ -50,7 +50,7 @@ class Employee < ActiveRecord::Base
 
   # Virtual attribute to obtain a fullname
   def fullname
-    [firstname, lastname].join(' ')
+    [firstname, lastname].join(' ').force_encoding('utf-8')
   end
   
 end
