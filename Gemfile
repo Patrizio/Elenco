@@ -42,9 +42,9 @@ gem 'capistrano'
 # and rake tasks are available in development mode:
 group :development, :test do
 	gem 'annotate'
-	gem 'rspec'
-	gem 'cucumber'
-	gem 'webrat'
+	# gem 'rspec'
+	# gem 'cucumber'
+	# gem 'webrat'
 end
 
 group :production do
