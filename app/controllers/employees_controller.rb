@@ -3,7 +3,7 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.xml
   def index
-    @employees = Employee.search_significant_fields(params[:search])
+    @employees = Employee.all
     
     respond_to do |format|
       format.html # index.html.erb

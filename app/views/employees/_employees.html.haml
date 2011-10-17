@@ -3,6 +3,8 @@
 		.name
 			= link_to employee.fullname, employee_path(employee), :class => "employee-details", :title => t("click-4-details")
 		%span.extension
-			=employee.extension
+			= employee.extension
+		%span.function
+			= employee.title
 		%span.department
-			=employee.title
+			= employee.department.force_encoding('utf-8')

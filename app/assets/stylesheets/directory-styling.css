@@ -8,7 +8,7 @@
 }
 
 
-#search {
+#q {
 	font-size: 1em;
 	padding: 2px 2px 2px 2px;
 	min-width: 170px;
@@ -45,9 +45,18 @@ a.employee-details:hover {
 	font-size: .75em;
 	font-weight: bold;
 }
-.department {
+.function {
 	font-size: .75em;
 }
+.department {
+	visibility: hidden;
+}
+.skills {
+/*
+	visibility: hidden;
+*/
+}
+
 td.field_label {
 	color: grey;
 	text-align: right;

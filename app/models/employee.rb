@@ -44,9 +44,9 @@ class Employee < ActiveRecord::Base
   
   # Live search is performed on the columns specified here
   # questionmark operator indicates the ternary operator (IF-ELSE)
-  scope :search_significant_fields, lambda { |q|
-    (q ? where(["firstname LIKE ? or lastname LIKE ? or department LIKE ?", '%'+ q + '%', '%'+ q + '%', '%'+ q + '%']) | tagged_with('%' + q + '%'): {})
-  }  
+  #scope :search_significant_fields, lambda { |q|
+  #  (q ? where(["firstname LIKE ? or lastname LIKE ? or department LIKE ?", '%'+ q + '%', '%'+ q + '%', '%'+ q + '%']) | tagged_with('%' + q + '%'): {})
+  #}  
 
   # Virtual attribute to obtain a fullname
   def fullname

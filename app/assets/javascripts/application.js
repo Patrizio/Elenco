@@ -9,7 +9,19 @@
 //= require jquery.fancybox-1.3.1
 //= require_tree .
 
-$(document).ready(function () {
+$().ready(function () {
+	// instant search on name-value
+	$('#q').keyup(function() {
+		$('.employee').each(function() {
+			var re = new RegExp($('#q').val(), 'i')
+			// search: name value
+			if($(this).children('.name')[0].innerHTML.match(re)) {
+				$(this).show();
+			} else {
+				$(this).hide();
+			};
+		})
+	});
 	$(".employee").live("click",function(ev){
     	ev.preventDefault();
     	$.fancybox({
@@ -25,10 +37,5 @@ $(document).ready(function () {
 	});
 });
 
-$(function() {
-	$("#employees_search input").keyup( function() {
-		$.get($("#employees_search").attr("action"), $("#employees_search").serialize(), null, "script");
-		return false;
-	});
-});
+
 
