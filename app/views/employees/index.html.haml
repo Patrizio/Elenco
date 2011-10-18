@@ -1,6 +1,12 @@
 = form_tag employees_path, :method => 'get', :id => "employees_search" do
 	%p
 		= text_field_tag :q, params[:search], :type => 'search', :placeholder => t(:placeholder_label), :autocomplete => "off"
+	%span.category
+		= radio_button_tag 'category', 'name', :checked => true
+		= label_tag :category_name, 'Naam'
+		= radio_button_tag 'category', 'department'
+		= label_tag :category_department, 'Afdeling'
+
 
 %div#employees
 	= render 'employees'
