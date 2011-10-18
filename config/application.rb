@@ -30,7 +30,7 @@ module Elenco
     # config.time_zone = 'Central Time (US & Canada)'
 
     # Set property for google analytics
-    config.middleware.use "Rack::GoogleAnalytics", :web_property_id => "UA-26182142-1"
+    # config.middleware.use "Rack::GoogleAnalytics", :web_property_id => "UA-26182142-1"
     
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config/application.rb
