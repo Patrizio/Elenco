@@ -10,7 +10,7 @@
 //= require_tree .
 
 $().ready(function () {
-	// instant search on name-value
+	//  sift employees based on each user input (show/hide)
 	$('#q').keyup(function() {
 		$('.employee').each(function() {
 			var re = new RegExp($('#q').val(), 'i')
@@ -22,6 +22,20 @@ $().ready(function () {
 			};
 		})
 	});
+	// see if the search field has been cleared (click X)
+	$('#q').live("click", function(e) {
+		var searchString = this.value;
+		if(searchString == "" ) {
+			// search field is empty
+			// show all employees
+			$('.employee').each(function() {
+				$(this).show();
+			})
+		} else {
+			// search field has content
+		}	 
+	});
+	// attach fancybox behavior on each person
 	$(".employee").live("click",function(ev){
     	ev.preventDefault();
     	$.fancybox({
