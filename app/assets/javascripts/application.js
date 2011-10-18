@@ -35,7 +35,7 @@ $().ready(function () {
 			// search field has content
 		}	 
 	});
-	// attach fancybox behavior on each person
+	// attach fancybox behavior to each person
 	$(".employee").live("click",function(ev){
     	ev.preventDefault();
     	$.fancybox({
