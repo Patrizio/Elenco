@@ -48,14 +48,6 @@ a.employee-details:hover {
 .function {
 	font-size: .75em;
 }
-.department {
-	visibility: hidden;
-}
-.skills {
-/*
-	visibility: hidden;
-*/
-}
 
 td.field_label {
 	color: grey;
