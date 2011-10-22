@@ -24,12 +24,18 @@ gem 'capistrano'
 
 group :development, :test do
 	gem 'annotate'
+<<<<<<< HEAD
 	gem 'rspec-rails'
 	gem 'fabrication'
 	gem 'faker'
 	gem 'database_cleaner'
 	gem 'capybara'
 	gem 'selenium-webdriver'
+=======
+	gem 'rspec'
+	# gem 'cucumber'
+	# gem 'webrat'
+>>>>>>> re-enabled rspec
 end
 
 group :production do
