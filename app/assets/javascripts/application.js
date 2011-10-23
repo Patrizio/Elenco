@@ -23,7 +23,7 @@ $().ready(function () {
 		})
 	});
 	// see if the search field has been cleared (click X)
-	$('#q').live("click", function(e) {
+	$('#q').click(function(e) {
 		var searchString = this.value;
 		if(searchString == "" ) {
 			// search field is empty
