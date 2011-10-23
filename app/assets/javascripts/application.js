@@ -13,9 +13,10 @@ $().ready(function () {
 	//  sift employees based on each user input (show/hide)
 	$('#q').keyup(function() {
 		$('.employee').each(function() {
-			var re = new RegExp($('#q').val(), 'i')
+			var variable = $('#q').val();
+			var pattern = new RegExp(variable, 'gi')
 			// search: name value
-			if($(this).children('.name')[0].innerHTML.match(re)) {
+			if($(this).children('.name')[0].innerHTML.match(pattern)) {
 				$(this).show();
 			} else {
 				$(this).hide();
