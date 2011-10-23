@@ -22,6 +22,7 @@
 .employee:hover {
 	background: darkorange;
 	color: white;
+	cursor: pointer;
 }
 a.employee-details {
 	text-decoration: none;
