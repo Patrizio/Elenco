@@ -31,9 +31,7 @@ $().ready(function () {
 			$('.employee').each(function() {
 				$(this).show();
 			})
-		} else {
-			// search field has content
-		}	 
+		}
 	});
 	// attach fancybox behavior to each person
 	$(".employee").live("click",function(ev){
