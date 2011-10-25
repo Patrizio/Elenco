@@ -41,9 +41,10 @@ a.employee-details:hover {
 .extension {
 	font-weight: bold;
 	padding-left: 3px;
-	
+	font-size: .75em;
 }
 .function {
+	font-size: .75em;
 }
 
 td.field_label {
