@@ -1,5 +1,5 @@
 -@employees.each do |employee|
-	%div.employee{:href=> }
+	%div.employee{:href=> employee_path(employee) }
 		.name
 			= employee.fullname
 		%span.extension

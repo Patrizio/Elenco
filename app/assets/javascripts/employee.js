@@ -31,7 +31,7 @@ $().ready(function () {
     	ev.preventDefault();
     	$.fancybox({
         	type: "iframe",
-			href: $(this).find('.employee-details').attr('href'),
+			href: $(this).attr('href'),
 			'transitionIn'	:	'elastic',
 			'transitionOut'	:	'elastic',
 			'speedIn'		:	10, 
