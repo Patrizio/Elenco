@@ -24,19 +24,6 @@
 					= t('employees.mobile').downcase
 				%span.value
 					= @employee.mobile
-			.detail
-				%span.key
-					= t('employees.email').downcase
-				%span.value
-					= @employee.extension
-		.chapter
-			%h2= t('employees.skills')
-			.detail
-				- @employee.skills.each do |skill|
-					%span.value
-					= skill
-					|
-		
 %p
 	%span
 		= link_to t('employees.edit-profile'), edit_employee_path(@employee)

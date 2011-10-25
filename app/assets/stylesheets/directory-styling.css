@@ -26,15 +26,6 @@ input[type=search] {
 	color: white;
 	cursor: pointer;
 }
-a.employee-details {
-	text-decoration: none;
-	font-size: 1em;
-	color: black;
-	height: 40px;
-}
-a.employee-details:hover {
-	color: white;
-}
 .name {
 	padding-left: 3px;
 }
