@@ -19,6 +19,7 @@ input[type=search] {
 	border-bottom: 1px dotted lightgrey;
 	margin: 0px 0px 0px 0px;
 	color: black;
+	height: 40px;
 }
 .employee:hover {
 	background: darkorange;
@@ -29,26 +30,20 @@ a.employee-details {
 	text-decoration: none;
 	font-size: 1em;
 	color: black;
-	display: block;
+	height: 40px;
 }
 a.employee-details:hover {
 	color: white;
 }
 .name {
 	padding-left: 3px;
-	display: block;
-	
-}
-.name:hover {
-	
 }
 .extension {
-	padding-left: 3px;
-	font-size: .75em;
 	font-weight: bold;
+	padding-left: 3px;
+	
 }
 .function {
-	font-size: .75em;
 }
 
 td.field_label {

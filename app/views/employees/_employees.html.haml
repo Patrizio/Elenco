@@ -1,7 +1,7 @@
 -@employees.each do |employee|
 	%div.employee
 		.name
-			= link_to employee.fullname, employee_path(employee), :class => "employee-details", :title => t("click-4-details")
+			= employee.fullname
 		%span.extension
 			= employee.extension
 		%span.function
