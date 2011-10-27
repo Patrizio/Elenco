@@ -12,9 +12,11 @@ class ApplicationController < ActionController::Base
   
   private
     def authentication_check
-      authenticate_or_request_with_http_basic do |user, password|
-        user == "elenco" && password == "stayokay"
-    end
+      if Rails.env.production?
+        authenticate_or_request_with_http_basic do |user, password|
+          user == "elenco" && password == "stayokay"
+        end
+      end
   end
   
 end

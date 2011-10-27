@@ -50,7 +50,7 @@ describe Employee do
       results.should include(@marieke)
       results.should_not include(@patrick)
     end 
-    
+     
     pending "should search by department"
     
     pending "should search by a skill"
