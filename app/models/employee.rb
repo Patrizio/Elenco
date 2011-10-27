@@ -25,7 +25,7 @@ class Employee < ActiveRecord::Base
   # Validate the following fields and their specific requirements 
   validates_presence_of :firstname, :lastname, :title, :department, :extension
   validates_numericality_of :extension
-  validates_length_of :extension, :is => 4
+  #validates_length_of :extension, :is => 4
   validates_uniqueness_of :extension,:mobile, :allow_blank => true
   
   # Each employee has a profile picture

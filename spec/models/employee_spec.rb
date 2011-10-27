@@ -16,5 +16,45 @@ describe Employee do
     it { should be_valid }
     
   end
+
+  describe ".fullname" do
+    
+    pending "should generate a fullname based on first and last name"
+    
+  end
+
+  describe "#search_significant_fields" do
+    
+    before :all do
+      @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :department => 'Marketing')
+      @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :department => 'Developer')
+    end
+    
+    it "should search by firstname" do
+      results = Employee.search_significant_fields('Patrick')
+      
+      results.should include(@patrick)
+      results.should_not include(@marieke)
+    end
+    
+    it "should still return an employee if the firstname's case is not correct" do
+      results = Employee.search_significant_fields('patrick')
+      
+      results.should include(@patrick)
+      results.should_not include(@marieke)
+    end
+    
+    it "should search by lastname" do
+      results = Employee.search_significant_fields('Van Tijn')
+
+      results.should include(@marieke)
+      results.should_not include(@patrick)
+    end 
+    
+    pending "should search by department"
+    
+    pending "should search by a skill"
+    
+  end
   
 end
