@@ -19,7 +19,17 @@ describe Employee do
 
   describe ".fullname" do
     
-    pending "should generate a fullname based on first and last name"
+    it "should generate a fullname based on first and last name" do
+      @employee = Fabricate(:employee)
+      
+      fullname = @employee.fullname
+
+      firstname = @employee.firstname
+      lastname = @employee.lastname
+      
+      fullname.should == [firstname, lastname].join(' ')
+      
+    end
     
   end
 
@@ -29,7 +39,6 @@ describe Employee do
       @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :department => 'Marketing', :skill_list => 'ruby, excel')
       @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :department => 'Marketing', :skill_list => 'excel')
       @kunto = Fabricate(:employee, :firstname => 'Kunto', :lastname => 'Wibisono', :department => 'ICT', :skill_list => 'excel')
-      
     end
     
     it "should search by firstname" do
