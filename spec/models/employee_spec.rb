@@ -26,9 +26,9 @@ describe Employee do
   describe "#search_significant_fields" do
     
     before :all do
-      @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :department => 'Marketing')
-      @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :department => 'Marketing')
-      @kunto = Fabricate(:employee, :firstname => 'Kunto', :lastname => 'Wibisono', :department => 'ICT')
+      @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :department => 'Marketing', :skill_list => 'ruby, excel')
+      @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :department => 'Marketing', :skill_list => 'excel')
+      @kunto = Fabricate(:employee, :firstname => 'Kunto', :lastname => 'Wibisono', :department => 'ICT', :skill_list => 'excel')
       
     end
     
@@ -60,7 +60,18 @@ describe Employee do
       results.should_not include(@kunto)
     end    
     
-    pending "should search by a skill"
+    it "should return employees of that have a general skill" do
+      results = Employee.search_significant_fields('excel')
+
+      results.should include(@marieke, @patrick, @kunto)
+    end    
+    
+    it "should return only employees of that have a unique skill" do
+      results = Employee.search_significant_fields('ruby')
+
+      results.should include(@patrick)
+      results.should_not include(@kunto, @marieke)
+    end
     
   end
   
