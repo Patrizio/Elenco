@@ -27,7 +27,9 @@ describe Employee do
     
     before :all do
       @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :department => 'Marketing')
-      @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :department => 'Developer')
+      @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :department => 'Marketing')
+      @kunto = Fabricate(:employee, :firstname => 'Kunto', :lastname => 'Wibisono', :department => 'ICT')
+      
     end
     
     it "should search by firstname" do
@@ -50,8 +52,13 @@ describe Employee do
       results.should include(@marieke)
       results.should_not include(@patrick)
     end 
-     
-    pending "should search by department"
+    
+    it "should return all employees of a department" do
+      results = Employee.search_significant_fields('marketing')
+
+      results.should include(@patrick, @marieke)
+      results.should_not include(@kunto)
+    end    
     
     pending "should search by a skill"
     
