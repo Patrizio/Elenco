@@ -40,7 +40,7 @@ describe Employee do
     end
     
     it "should still return an employee if the firstname's case is not correct" do
-      results = Employee.search_significant_fields('patrick')
+      results = Employee.search_significant_fields('PATRICK')
       
       results.should include(@patrick)
       results.should_not include(@marieke)
@@ -60,13 +60,19 @@ describe Employee do
       results.should_not include(@kunto)
     end    
     
-    it "should return employees of that have a general skill" do
+    it "should return employees with a general skill" do
       results = Employee.search_significant_fields('excel')
 
       results.should include(@marieke, @patrick, @kunto)
-    end    
+    end
     
-    it "should return only employees of that have a unique skill" do
+    it "should still return employees with a general skill when the case is not correct" do
+      results = Employee.search_significant_fields('eXcel')
+
+      results.should include(@marieke, @patrick, @kunto)
+    end  
+    
+    it "should return employees with a relative unique skill" do
       results = Employee.search_significant_fields('ruby')
 
       results.should include(@patrick)
