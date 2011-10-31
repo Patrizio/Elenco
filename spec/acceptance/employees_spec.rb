@@ -17,7 +17,7 @@ feature "Employees" do
   end
   
   scenario "search for an employee" do
-    fill_in 'search', :with => 'Patrick'
+    fill_in 'q', :with => 'Patrick'
     
     page.should have_content 'Patrick Beeker'
     page.should have_no_content 'Marieke van Tijn'
