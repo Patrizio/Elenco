@@ -1,8 +1,8 @@
 -@employees.each do |employee|
-	%div.employee
+	%div.employee{:href=> employee_path(employee) }
 		.name
-			= link_to employee.fullname, employee_path(employee), :class => "employee-details", :title => t("click-4-details")
+			= employee.fullname
 		%span.extension
-			=employee.extension
-		%span.department
-			=employee.title
+			= employee.extension
+		%span.function
+			= employee.title
