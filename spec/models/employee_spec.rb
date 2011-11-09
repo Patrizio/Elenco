@@ -45,21 +45,21 @@ describe Employee do
       results = Employee.search_significant_fields('Patrick')
       
       results.should include(@patrick)
-      results.should_not include(@marieke)
+      results.should_not include(@marieke, @kunto)
     end
     
     it "should still return an employee if the firstname's case is not correct" do
       results = Employee.search_significant_fields('PATRICK')
       
       results.should include(@patrick)
-      results.should_not include(@marieke)
+      results.should_not include(@marieke, @kunto)
     end
     
     it "should search by lastname" do
       results = Employee.search_significant_fields('Van Tijn')
 
       results.should include(@marieke)
-      results.should_not include(@patrick)
+      results.should_not include(@patrick, @kunto)
     end 
     
     it "should return all employees of a department" do
