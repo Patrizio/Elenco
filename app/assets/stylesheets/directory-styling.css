@@ -7,47 +7,37 @@
 	text-align: left;
 }
 
-
-#search {
-	font-size: 1em;
-	padding: 2px 2px 2px 2px;
-	min-width: 170px;
+input[type=search] {
+	color: darkorange;
+	text-align: left;
+	display: block;
+	font-size: 12px;
+	min-width: 140px;
 }
 
 .employee {
 	border-bottom: 1px dotted lightgrey;
 	margin: 0px 0px 0px 0px;
 	color: black;
+	height: 40px;
 }
 .employee:hover {
 	background: darkorange;
 	color: white;
-}
-a.employee-details {
-	text-decoration: none;
-	font-size: 1em;
-	color: black;
-	display: block;
-}
-a.employee-details:hover {
-	color: white;
+	cursor: pointer;
 }
 .name {
 	padding-left: 3px;
-	display: block;
-	
-}
-.name:hover {
-	
 }
 .extension {
+	font-weight: bold;
 	padding-left: 3px;
 	font-size: .75em;
-	font-weight: bold;
 }
-.department {
+.function {
 	font-size: .75em;
 }
+
 td.field_label {
 	color: grey;
 	text-align: right;
