@@ -18,8 +18,9 @@ input[type=search] {
 .employee {
 	border-bottom: 1px dotted lightgrey;
 	margin: 0px 0px 0px 0px;
+	padding: 0px 1px 0px 2px;
 	color: black;
-	height: 40px;
+	height: 35px;
 }
 .employee:hover {
 	background: darkorange;
