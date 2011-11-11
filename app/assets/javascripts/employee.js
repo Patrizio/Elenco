@@ -2,7 +2,8 @@
 // Contains logic related to searching/showing/hiding employees based on user 
 
 $(document).ready(function () {
-	$(".employee").live("click",function(ev){
+	// Each employee when clicked should be displayed in a particulair way 
+	$(".employee").live("click", function(ev){
     	ev.preventDefault();
     	$.fancybox({
         	type: "iframe",
@@ -15,20 +16,28 @@ $(document).ready(function () {
 			'height'		: 	600
     	})
 	});
-
+	// what should happen when interacting with the search-field
 	$("#search").bind({
 		keyup: function () {
-				$.get($("#employees_search").attr("action"), $("#employees_search").serialize(), null, "script");
-				return false;
+				var searchStringLength = this.value.length;
+				if ( searchStringLength == 0) {
+					// empty searchvalue
+					$.get($("#employees_search").attr("action"), $("#employees_search").serialize(), null, "script");
+					return false;
+				} else if (searchStringLength >= 3) {
+					// 3 or more characters in searchvalue
+					$.get($("#employees_search").attr("action"), $("#employees_search").serialize(), null, "script");
+					return false;
+				}				
 		},
 		click: function () {
-				var searchString = this.value;
-				if(searchString == "" ) {
-					// search field is empty
-					// show all employees
+				// cross to empty search clicked
+				var searchStringLength = this.value.length;
+				if ( searchStringLength == 0) {
+					// empty searchvalue
 					$.get($("#employees_search").attr("action"), $("#employees_search").serialize(), null, "script");
-					return false;		
+					return false;
 				}
-		}
+		}		
 	})
 });
