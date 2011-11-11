@@ -23,19 +23,6 @@ $(document).ready(function () {
 			'height'		: 	600
     	})
 	});
-	$(".employee").live("touchmove",function(ev){
-    	ev.preventDefault();
-    	$.fancybox({
-        	type: "iframe",
-			href: $(this).attr('href'),
-			'transitionIn'	:	'elastic',
-			'transitionOut'	:	'elastic',
-			'speedIn'		:	10, 
-			'speedOut'		:	10, 
-			'overlayShow'	:	true,
-			'height'		: 	600
-    	})
-	});
 });
 
 $(function() {
