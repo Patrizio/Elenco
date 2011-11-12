@@ -4,6 +4,9 @@ class EmployeesController < ApplicationController
   # GET /employees.xml
   def index
     @employees = Employee.search_significant_fields(params[:search])
+  rescue ActiveRecord::RecordNotFound
+    flash[:notice] = "The object you tried to access does not exist"
+    redirect_to :action => 'index'
     
     respond_to do |format|
       format.html # index.html.erb
