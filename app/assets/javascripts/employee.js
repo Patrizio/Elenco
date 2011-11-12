@@ -3,14 +3,14 @@
 
 $(document).ready(function () {
 	// Each employee when clicked should be displayed in a particulair way 
-	$(".employee").live("click", function(ev){
-    	ev.preventDefault();
-    	$.fancybox({
-        	type: "iframe",
-			href: $(this).attr('href'),
+	$(".employee").live('click', function () {
+		$this = $(this);
+		$.fancybox({
+        	type: "ajax",
+			href: $this.attr('href'),
 			'transitionIn'	:	'none',
 			'transitionOut'	:	'none', 
-			'overlayShow'	:	false,
+			'overlayShow'	:	true,
 			'autoDimensions': true
     	})
 	});
