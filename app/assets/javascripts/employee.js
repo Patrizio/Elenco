@@ -8,12 +8,10 @@ $(document).ready(function () {
     	$.fancybox({
         	type: "iframe",
 			href: $(this).attr('href'),
-			'transitionIn'	:	'elastic',
-			'transitionOut'	:	'elastic',
-			'speedIn'		:	10, 
-			'speedOut'		:	10, 
-			'overlayShow'	:	true,
-			'height'		: 	600
+			'transitionIn'	:	'none',
+			'transitionOut'	:	'none', 
+			'overlayShow'	:	false,
+			'autoDimensions': true
     	})
 	});
 	// what should happen when interacting with the search-field
