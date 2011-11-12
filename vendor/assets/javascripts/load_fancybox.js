@@ -14,13 +14,3 @@
 // overlayOpacity : Opacity of overlay (from 0 to 1)
 // itemLoadCallback : Custom function to get group items 
 //                   (see example on source of : http://fancy.klade.lv/)
-
-$(document).ready(function() {
-  $("a.fancy-img").fancybox();
-  $(".gallery a").fancybox();
-  $("a.fancy").fancybox();
-  $("a.iframe").fancybox({
-    'frameWidth': 800,
-    'frameHeight': 600
-  });
-});
