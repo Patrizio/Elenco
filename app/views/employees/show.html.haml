@@ -28,7 +28,7 @@
 				%span.key
 					= t('employees.email').downcase
 				%span.value
-					= @employee.extension
+					= mail_to @employee.email, @employee.email
 		.chapter
 			%h2= t('employees.skills')
 			.detail
