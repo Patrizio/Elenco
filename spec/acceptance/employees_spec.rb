@@ -3,8 +3,8 @@ require 'acceptance/acceptance_helper'
 feature "Employees" do
   
   background :all do
-    @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :department => 'Marketing')
-    @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'van Tijn', :department => 'Developer')
+    @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :department => 'Marketing', :email => 'p.beeker@stayokay.com')
+    @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'van Tijn', :department => 'Developer', :email => 'm.vantijn@stayokay.com')
   end
   
   background :each do
