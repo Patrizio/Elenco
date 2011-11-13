@@ -8,6 +8,7 @@ describe Employee do
   it { should have(1).error_on(:lastname) }
   it { should have(1).error_on(:title) }
   it { should have(1).error_on(:department) }
+  it { should have(1).error_on(:email) }
   
   context "after fabrication" do
     
