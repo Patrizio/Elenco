@@ -23,7 +23,6 @@ end
 gem 'capistrano'
 
 group :development, :test do
-	gem 'annotate'
 	gem 'rspec-rails'
 	gem 'fabrication'
 	gem 'faker'
