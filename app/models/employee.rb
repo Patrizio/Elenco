@@ -21,6 +21,7 @@ class Employee < ActiveRecord::Base
     text :department
     text :email
     text :title
+    text :skills
     integer :extension
   end
   
