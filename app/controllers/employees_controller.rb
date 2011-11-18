@@ -7,6 +7,7 @@ class EmployeesController < ApplicationController
     @search = Employee.search do
       fulltext params[:search]
     end
+    
     @employees = @search.results
     
     respond_to do |format|
@@ -15,6 +16,8 @@ class EmployeesController < ApplicationController
       format.js
     end
   end
+  
+  
 
   # GET /employees/1
   # GET /employees/1.xml
