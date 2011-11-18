@@ -3,6 +3,10 @@ class Employee < ActiveRecord::Base
   # Protect the following attributes from outside access
   attr_protected :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
   
+  searchable do
+      string :firstname, :lastname
+  end
+  
   # Validate the following fields and their specific requirements 
   validates_presence_of :firstname, :lastname, :title, :department, :extension, :email
   validates_numericality_of :extension
@@ -19,15 +23,6 @@ class Employee < ActiveRecord::Base
   # validates_attachment_presence(:avatar)
   # validates_attachment_size :avatar, :less_than => 5.megabytes  
   # validates_attachment_content_type :avatar, :content_type => ['image/jpeg']
-  
-  # The default way items are ordered/presented
-  default_scope :order => 'extension'
-  
-  # Live search is performed on the columns specified here
-  # questionmark operator indicates the ternary operator (IF-ELSE)
-  scope :search_significant_fields, lambda { |q|
-    (q ? where(["firstname LIKE ? or lastname LIKE ? or department LIKE ?", '%'+ q + '%', '%'+ q + '%', '%'+ q + '%']) | tagged_with(q): {})
-  }  
 
   # Virtual attribute to obtain a fullname
   def fullname
