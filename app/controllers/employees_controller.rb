@@ -6,6 +6,7 @@ class EmployeesController < ApplicationController
     
     @search = Employee.search do
       fulltext params[:search]
+      order_by :extension, :asc
     end
     
     @employees = @search.results
