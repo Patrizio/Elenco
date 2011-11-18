@@ -4,7 +4,7 @@ class Employee < ActiveRecord::Base
   attr_protected :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
   
   searchable do
-      string :firstname, :lastname
+      text :firstname, :lastname
   end
   
   # Validate the following fields and their specific requirements 
