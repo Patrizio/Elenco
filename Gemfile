@@ -8,8 +8,8 @@ gem 'jquery-rails'
 gem 'paperclip', '~> 2.4'
 gem 'rack' , '1.3.3'
 gem 'rack-google_analytics'
-
 gem 'acts-as-taggable-on', '~>2.1.0'
+gem 'sunspot_rails', '~> 1.2.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
