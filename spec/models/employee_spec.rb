@@ -37,9 +37,9 @@ describe Employee do
   describe "#search_significant_fields" do
     
     before :all do
-      @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :department => 'Marketing', :email => 'p.beeker@stayokay.com', :skill_list => 'ruby, excel')
-      @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :department => 'Marketing', :email => 'm.vantijn@stayokay.com',:skill_list => 'excel')
-      @kunto = Fabricate(:employee, :firstname => 'Kunto', :lastname => 'Wibisono', :department => 'ICT', :email => 'k.wibisono@stayokay.com', :skill_list => 'excel')
+      @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :extension => 9125, :department => 'Marketing', :email => 'p.beeker@stayokay.com', :skill_list => 'ruby, excel')
+      @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :extension => 9123, :department => 'Marketing', :email => 'm.vantijn@stayokay.com',:skill_list => 'excel')
+      @kunto = Fabricate(:employee, :firstname => 'Kunto', :lastname => 'Wibisono', :extension => 9182, :department => 'ICT', :email => 'k.wibisono@stayokay.com', :skill_list => 'excel')
     end
     
     it "should search by firstname" do
@@ -87,6 +87,13 @@ describe Employee do
 
       results.should include(@patrick)
       results.should_not include(@kunto, @marieke)
+    end
+    
+    it "should still return an employee by extension" do
+      results = Employee.search_significant_fields('9123')
+      
+      results.should include(@marieke)
+      results.should_not include(@patrick, @kunto)
     end
     
   end
