@@ -8,7 +8,9 @@ nl:
       male: "man"
       female: "vrouw"
   ask-for-confirmation: "Weet je het zeker?"
-            
+
+  cancel: "Annuleer"
+      
   date:
     formats:
       default: "%d/%m/%Y"
