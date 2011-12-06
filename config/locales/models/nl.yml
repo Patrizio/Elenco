@@ -1,0 +1,4 @@
+nl:
+  activerecord:
+    models:
+      employee: Medewerker
