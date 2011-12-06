@@ -66,7 +66,7 @@ class EmployeesController < ApplicationController
 
     respond_to do |format|
       if @employee.update_attributes(params[:employee])
-        format.html { redirect_to(@employee, :notice => t("activerecord.notice.update")) }
+        format.html { redirect_to(@employee, :notice => t("activerecord.notice.update", :model => @employee.class.model_name.human)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
