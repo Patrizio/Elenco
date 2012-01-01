@@ -10,8 +10,10 @@ class Employee < ActiveRecord::Base
   validates_uniqueness_of :extension, :mobile, :allow_blank => true
   
   # Each employee has a profile picture
-  has_attached_file :avatar, :styles => { :small => "200x200" } 
-  
+  has_attached_file :avatar, 
+                    :default_url => '/assets/profile-head.gif',
+                    :styles => { :small => "200x200" } 
+                    
   # Allow each employee to have tags of their skills
   acts_as_taggable_on :skills
   
