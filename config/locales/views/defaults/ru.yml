@@ -1,0 +1,24 @@
+# Russian translation for view: employees
+
+ru:
+    back: "назад"
+    click-4-details: "подробнее"
+    
+    placeholder_label: "найти работника..."
+    
+    employees:
+        firstname: "имя"
+        lastname: "фамилия"
+        fullname: "полное имя"
+        title: "название"
+        department: "отдел"
+        extension: "номер телефона"
+        mobile: "мобильный телефон"
+        email: "электронная почта"
+        contact-title: "дополнительная информация"
+        profile-title: ""
+        skills: "навыки"
+        skills-sample: "Bijv. pms, daarbuiten, banqueting"
+        edit-profile: "редактировать профиль"
+        delete-profile: "удалить профиль"
+        new-profile: "новый профиль"
