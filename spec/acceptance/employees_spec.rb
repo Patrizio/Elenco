@@ -11,7 +11,7 @@ feature "Employees" do
   background :each do
     visit '/nl'
   end
-  
+
   scenario "view all employees on the root page" do
     page.should have_content 'Patrick Beeker'
     page.should have_content 'Marieke van Tijn'
@@ -24,7 +24,6 @@ feature "Employees" do
     page.should have_no_content 'Marieke van Tijn'
     page.should have_no_content 'Kunto Wibisono'
   end
-  
   
   scenario "get details on single employee" do
     pending "still working on"
