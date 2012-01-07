@@ -12,6 +12,7 @@ set :application, "elenco"
 # Gegevens van de Bluerail server
 set :host, "mushu.bluerail.nl"
 set :user, "digi-dex"
+set :password, "NR5V#DCj"
 
 # Versiebeheer instellingen
 set :scm, :git  # Of 'subversion', 'mercurial' , etc.
