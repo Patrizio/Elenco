@@ -1,3 +1,5 @@
+- keywords = 'company directory, ruby on rails, intranet, saas, embeddable widget'
+- description = 'Digidex is an easy to use embeddable company directory. It solves a mundane problem, which however hasn\'t been aptly solved.'
 !!! 5
 %html
 	%head
@@ -5,6 +7,8 @@
 		= stylesheet_link_tag "application"
 		= javascript_include_tag "application"
 		= csrf_meta_tag
+		== <meta name="description" content="#{description}" />
+		== <meta name="keywords" content="#{keywords}" />
 	%body
 		= yield
 
