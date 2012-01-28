@@ -1,6 +1,5 @@
 Elenco::Application.routes.draw do
   
-  resources :companies
 
   get "pages/home"
   
@@ -11,6 +10,7 @@ Elenco::Application.routes.draw do
   # includes the locale parameter in the url structure
   scope "/:locale" do
     resources :employees
+    resources :companies
   end
   
   
