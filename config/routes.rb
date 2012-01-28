@@ -1,5 +1,7 @@
 Elenco::Application.routes.draw do
   
+  resources :companies
+
   get "pages/home"
   
   # define default route
