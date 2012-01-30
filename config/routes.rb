@@ -8,11 +8,11 @@ Elenco::Application.routes.draw do
   root :to => "pages#home"
   
   # includes the locale parameter in the url structure
-#  scope "/:locale" do
+  scope "/:locale" do
     resources :companies do
       resources :employees
     end
- # end
+  end
   
   
   # The priority is based upon order of creation:
