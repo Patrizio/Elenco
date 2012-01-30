@@ -1,7 +1,4 @@
 class EmployeesController < ApplicationController
-
-  # basic authentication
-  before_filter :authentication_check
    
   # GET /employees
   # GET /employees.xml
@@ -89,16 +86,6 @@ class EmployeesController < ApplicationController
       format.html { redirect_to(employees_url) }
       format.xml  { head :ok }
     end
-  end
-  
-  # Basic HTTP authentication
-  private
-    def authentication_check
-      if Rails.env.production?
-        authenticate_or_request_with_http_basic do |user, password|
-          user == "elenco" && password == "stayokay"
-        end
-      end
   end
   
 end
