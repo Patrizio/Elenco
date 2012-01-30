@@ -1,6 +1,6 @@
 %p#notice=notice
 
-= form_tag employees_path, :method => 'get', :id => "employees_search" do
+= form_tag company_employees_path, :method => 'get', :id => "employees_search" do
 	%p
 		= text_field_tag :search, params[:search], :type => 'search', :placeholder => t(:placeholder_label), :autocomplete => 'off'
 

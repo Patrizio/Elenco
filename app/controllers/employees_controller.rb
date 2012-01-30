@@ -6,7 +6,7 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.xml
   def index
-    @employees = Employee.search_significant_fields(params[:search])
+    @employees = Company.find(params[:company_id]).employees.search_significant_fields(params[:search])
     CUSTOM_LOGGER.info(params[:search])
   rescue ActiveRecord::RecordNotFound
     flash[:notice] = "The object you tried to access does not exist"
@@ -22,7 +22,8 @@ class EmployeesController < ApplicationController
   # GET /employees/1
   # GET /employees/1.xml
   def show
-    @employee = Employee.find(params[:id])
+    @company = Company.find(params[:company_id])
+    @employee = @company.employees.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

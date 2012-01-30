@@ -39,6 +39,6 @@
 		
 %p
 	%span
-		= link_to t('employees.edit-profile'), edit_employee_path(@employee)
+		= link_to t('employees.edit-profile'), edit_company_employee_path(@employee)
 		|
 		= link_to t('employees.delete-profile'), @employee, :confirm => t("ask-for-confirmation"), :method => :delete
