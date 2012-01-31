@@ -42,7 +42,8 @@ class EmployeesController < ApplicationController
 
   # GET /employees/1/edit
   def edit
-    @employee = Employee.find(params[:id])
+    @company = Company.find(params[:company_id])
+    @employee = @company.employees.find(params[:id])
   end
 
   # POST /employees
