@@ -3,7 +3,8 @@ class EmployeesController < ApplicationController
   # GET /company/employees
   # GET /employees.xml
   def index
-    @employees = Company.find(params[:company_id]).employees.search_significant_fields(params[:search])
+    @company = Company.find(params[:company_id])
+    @employees = @company.employees.search_significant_fields(params[:search])
 =begin
     CUSTOM_LOGGER.info(params[:search])
   rescue ActiveRecord::RecordNotFound
