@@ -33,7 +33,8 @@ class EmployeesController < ApplicationController
   # GET /employees/new
   # GET /employees/new.xml
   def new
-    @employee = Employee.new
+    @company = Company.find(params[:company_id])
+    @employee = @company.employees.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -50,11 +51,12 @@ class EmployeesController < ApplicationController
   # POST /employees
   # POST /employees.xml
   def create
-    @employee = Employee.new(params[:employee])
+    @company = Company.find(params[:company_id])
+    @employee = @company.employees.new(params[:employee])
 
     respond_to do |format|
       if @employee.save
-        format.html { redirect_to(@employee, :notice => t("activerecord.notice.create")) }
+        format.html { redirect_to(company_employee_path(@company, @employee), :notice => t("activerecord.notice.create")) }
         format.xml  { render :xml => @employee, :status => :created, :location => @employee }
       else
         format.html { render :action => "new" }
@@ -83,11 +85,12 @@ class EmployeesController < ApplicationController
   # DELETE /employees/1
   # DELETE /employees/1.xml
   def destroy
-    @employee = Employee.find(params[:id])
+    @company = Company.find(params[:company_id])
+    @employee = @company.employees.find(params[:id])
     @employee.destroy
 
     respond_to do |format|
-      format.html { redirect_to(employees_url) }
+      format.html { redirect_to(company_employees_url) }
       format.xml  { head :ok }
     end
   end
