@@ -1,4 +1,4 @@
-= form_for @employee, :html => { :multipart => true } do |f|
+= form_for [@company, @employee], :html => { :multipart => true } do |f|
 	- if @employee.errors.any?
 		#error_explanation
 			%h2= t('activerecord.errors.template.body')
