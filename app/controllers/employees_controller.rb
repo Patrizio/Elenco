@@ -66,11 +66,12 @@ class EmployeesController < ApplicationController
   # PUT /employees/1
   # PUT /employees/1.xml
   def update
-    @employee = Employee.find(params[:id])
+    @company = Company.find(params[:company_id])
+    @employee = @company.employees.find(params[:id])
 
     respond_to do |format|
       if @employee.update_attributes(params[:employee])
-        format.html { redirect_to(@employee, :notice => t("activerecord.notice.update", :model => @employee.class.model_name.human)) }
+        format.html { redirect_to(company_employee_path(@company, @employee), :notice => t("activerecord.notice.update", :model => @employee.class.model_name.human)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
