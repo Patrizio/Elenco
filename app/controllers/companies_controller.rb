@@ -13,7 +13,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
-    @company = Company.find(params[:id])
+    @company = Company.find_by_subdomain!(request.subdomain)
 
     respond_to do |format|
       format.html # show.html.erb
