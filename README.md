@@ -9,7 +9,5 @@ Current features
 
 * Add Employees and their contact details
 * Search employees on: partial name (first or last), department, or skill
-*
-
 
 
