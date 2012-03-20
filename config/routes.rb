@@ -12,7 +12,7 @@ Elenco::Application.routes.draw do
   end
   
   constraints(Subdomain) do
-    match '/' => 'companies#show'  
+    match '/' => 'employees#index'  
   end
   
   # define default route
