@@ -1,12 +1,14 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.2'
+
 gem 'sqlite3'
 gem 'haml'
 gem 'jquery-rails'
 gem 'paperclip', '~> 2.4'
 gem 'rack'
 gem 'rack-google_analytics'
+
 gem 'acts-as-taggable-on', '~>2.1.0'
 
 # Gems used only for assets and not required
