@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
 
-gem 'sqlite3'
 gem 'haml'
 gem 'jquery-rails'
 gem 'paperclip', '~> 2.4'
@@ -23,6 +22,7 @@ end
 gem 'capistrano'
 
 group :development, :test do
+	gem 'sqlite3'
 	gem 'rspec-rails'
 	gem 'fabrication'
 	gem 'faker'
