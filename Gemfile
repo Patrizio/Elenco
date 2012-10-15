@@ -1,22 +1,22 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 gem 'haml'
 gem 'jquery-rails'
-gem 'paperclip', '~> 2.4'
+gem 'paperclip'
 gem 'rack'
 gem 'rack-google_analytics'
 
-gem 'acts-as-taggable-on', '~>2.1.0'
+gem 'acts-as-taggable-on'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
 #  gem 'sass-rails', "  ~> 3.1.0"
 #  gem 'coffee-rails', "~> 3.1.0"
-   gem 'uglifier', '>=1.0.3'
+   gem 'uglifier'
 end
 
 # Deploy with Capistrano
@@ -34,5 +34,5 @@ end
 group :production do
   gem 'execjs'
   gem 'therubyracer'
-  gem 'mysql2', '~> 0.3.7'
+  gem 'mysql2'
 end

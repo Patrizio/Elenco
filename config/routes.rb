@@ -7,7 +7,6 @@ Elenco::Application.routes.draw do
   scope "/:locale" do
     resources :companies do
       resources :employees
-     
     end
   end
   
