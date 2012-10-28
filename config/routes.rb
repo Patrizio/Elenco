@@ -5,9 +5,8 @@ Elenco::Application.routes.draw do
   
   # includes the locale parameter in the url structure
   scope "/:locale" do
-    resources :companies do
-      resources :employees
-    end
+    resources :companies
+    resources :employees
   end
   
   constraints(Subdomain) do
@@ -15,8 +14,8 @@ Elenco::Application.routes.draw do
   end
   
   # define default route
-  match '/:locale' => "companies#index"
-  root :to => "pages#home"
+  #match '/:locale' => "companies#index"
+  #root :to => "pages#home"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
