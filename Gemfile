@@ -8,8 +8,8 @@ gem 'jquery-rails'
 gem 'paperclip'
 gem 'rack'
 gem 'rack-google_analytics'
-
 gem 'acts-as-taggable-on'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -31,8 +31,8 @@ group :development, :test do
 	gem 'selenium-webdriver'
 end
 
-group :production do
-  gem 'execjs'
-  gem 'therubyracer'
-  gem 'mysql2'
-end
+#group :production do
+#  gem 'execjs'
+#  gem 'therubyracer'
+#  gem 'mysql2'
+#end
