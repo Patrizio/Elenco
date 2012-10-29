@@ -5,3 +5,4 @@ tmp/
 public/system/
 solr/
 index/
+config/database.yml
