@@ -1,5 +1,4 @@
 Elenco::Application.routes.draw do
-  require 'subdomain'
   
   get "pages/home"
   
