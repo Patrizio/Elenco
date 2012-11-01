@@ -3,7 +3,7 @@ class EmployeesController < ApplicationController
   # GET /company/employees
   # GET /employees.xml
   def index
-    @company = Company.find_by_subdomain!(request.subdomain)
+    @company = Company.find(params[:company_id])
     @employees = @company.employees.search_significant_fields(params[:search])
 =begin
     CUSTOM_LOGGER.info(params[:search])
