@@ -5,12 +5,12 @@ class EmployeesController < ApplicationController
   def index
     @company = Company.find(params[:company_id])
     @employees = @company.employees.search_significant_fields(params[:search])
-=begin
+begin
     CUSTOM_LOGGER.info(params[:search])
   rescue ActiveRecord::RecordNotFound
     flash[:notice] = "The object you tried to access does not exist"
     redirect_to :action => 'index'
-=end
+end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @employees }
