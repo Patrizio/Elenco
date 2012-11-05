@@ -8,6 +8,8 @@ gem 'rack'
 gem 'rack-google_analytics'
 gem 'acts-as-taggable-on'
 gem 'pg'
+gem 'devise'
+gem 'friendly_id'
 
 # Gems used only for assets and not required
 # in production environments by default.
