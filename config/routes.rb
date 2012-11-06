@@ -1,5 +1,7 @@
 Elenco::Application.routes.draw do
   
+  devise_for :users
+
   get "pages/home"
   
   # includes the locale parameter in the url structure
