@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  extend FriendlyId
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -6,6 +7,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :name, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
+
+  validates_presence_of :name
+  validates_uniqueness_of :name, :email, :case_sensitive => false
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  friendly_id :name, use: :slugged
 end
