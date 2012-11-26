@@ -1,11 +1,9 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.8'
-gem 'sqlite3'
 gem 'haml'
 gem 'jquery-rails'
 gem 'paperclip'
-gem 'rack'
 gem 'rack-google_analytics'
 gem 'acts-as-taggable-on'
 gem 'pg'
