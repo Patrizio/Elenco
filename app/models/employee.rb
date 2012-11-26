@@ -6,10 +6,10 @@ class Employee < ActiveRecord::Base
   attr_protected :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
   
   # Validate the following fields and their specific requirements 
-  validates_presence_of :firstname, :lastname, :title, :department, :extension, :email
-  validates_numericality_of :extension
-  #validates_length_of :extension, :is => 4
-  validates_uniqueness_of :extension, :mobile, :allow_blank => true
+  validates_presence_of :firstname, :lastname, :title, :department, :email
+  
+  validates :extension, :uniqueness => true, :numericality => true, :length => { :is => 4 }, :allow_blank => true
+  validates :mobile, :uniqueness => true, :allow_blank => true
   
   # Each employee has a profile picture
   has_attached_file :avatar, 
