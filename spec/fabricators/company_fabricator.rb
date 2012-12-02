@@ -1,6 +1,6 @@
 Fabricator(:company) do
   name { Faker::Company.name }
-  subdomain { Faker::Company.name } 
+  subdomain 'company-name'
   phone { Faker::PhoneNumber.phone_number }
   fax_number { Faker::PhoneNumber.phone_number } 
   address { Faker::Address.street_address }
