@@ -20,4 +20,13 @@ describe Company do
     
   end
   
+  describe "valid companies" do
+    
+    it "should allow characters as subdomains"
+      @company_a = Fabricate(:company_a, :subdomain => '!!')
+      
+    end
+
+  end
+  
 end
