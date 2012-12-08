@@ -19,14 +19,23 @@ describe Company do
     it { should be_valid }
     
   end
-  
-  describe "valid companies" do
+ 
+ 
+  describe "#test_subdomain" do
     
-    it "should allow characters as subdomains"
-      @company_a = Fabricate(:company_a, :subdomain => '!!')
-      
+    before :all do
+      @company_a = Fabricate(:company)
     end
-
+ 
+    it "should have an unique subdomain name" do
+      c = Fabricate.build(:company, :subdomain => @company_a.subdomain)
+      c.should_not be_valid
+    end
+      
+    it "should have only characters for a subdomain" do
+  
+    end
+    
   end
   
 end
