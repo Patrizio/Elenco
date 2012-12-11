@@ -5,7 +5,7 @@ describe Company do
   it { should_not be_valid }
   
   it { should have(1).error_on(:name) }
-  it { should have(1).error_on(:subdomain) }
+  it { should have(2).error_on(:subdomain) }
   it { should have(1).error_on(:phone) }
   it { should have(1).error_on(:postalcode) }
   it { should have(1).error_on(:address) }
