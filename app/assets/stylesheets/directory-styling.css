@@ -88,3 +88,22 @@ td.field_label {
 .key {
 	color: grey;
 }
+
+.add_contact {
+	text-align: right;
+}
+
+#company_info .company_name {
+	color: black;
+	padding: 3px 10px;
+	cursor: pointer;
+	position: relative;
+	display: block;
+	background-color: lightgrey;
+	font-size: large;
+	text-transform: uppercase;
+	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;	
+}
+#company_details {
+	padding: 3px 10px;
+}

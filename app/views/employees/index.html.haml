@@ -1,8 +1,30 @@
 %p#notice=notice
 
+%div#company_info
+	%div.company_name
+		= @company.name
+	%div#company_details
+		.company_detail_rule
+			Tel.
+			= @company.phone
+		.company_detail_rule
+			Fax.
+			= @company.fax_number
+		.company_detail_rule
+			= @company.address
+		.company_detail_rule
+			= @company.postalcode
+		.company_detail_rule
+			= @company.city
+		.company_detail_rule
+			= @company.country			
+
 = form_tag company_employees_path, :method => 'get', :id => "employees_search" do
 	%p
 		= text_field_tag :search, params[:search], :type => 'search', :placeholder => t(:placeholder_label), :autocomplete => 'off'
 
 %div#employees
 	= render 'employees'
+
+%span.add_contact
+	= button_to( "Add Contact", new_company_employee_path, :method => :get )	
