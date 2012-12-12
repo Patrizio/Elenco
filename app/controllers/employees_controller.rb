@@ -56,7 +56,7 @@ end
 
     respond_to do |format|
       if @employee.save
-        format.html { redirect_to(company_employee_path(@company, @employee), :notice => t("activerecord.notice.create")) }
+        format.html { redirect_to(company_employees_path, :notice => t("activerecord.notice.create", :model => @employee.class.model_name.human)) }
         format.xml  { render :xml => @employee, :status => :created, :location => @employee }
       else
         format.html { render :action => "new" }
