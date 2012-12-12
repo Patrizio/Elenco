@@ -2,6 +2,10 @@
 // Contains logic related to searching/showing/hiding employees based on user 
 
 $(document).ready(function () {
+	$("#company_details").hide();
+	$(".company_name").click(function() {
+    	$("#company_details").slideToggle(100);
+  	});
 	// Each employee when clicked should be displayed in a particulair way 
 	$(".employee").live('click', function () {
 		$.fancybox({
