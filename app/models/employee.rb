@@ -7,7 +7,6 @@ class Employee < ActiveRecord::Base
   
   # Validate the following fields and their specific requirements 
   validates_presence_of :firstname, :lastname, :title, :department, :email
-  
   validates :extension, :uniqueness => true, :numericality => true, :allow_blank => true
   validates :mobile, :uniqueness => true, :allow_blank => true
   
@@ -18,12 +17,7 @@ class Employee < ActiveRecord::Base
                     
   # Allow each employee to have tags of their skills
   acts_as_taggable_on :skills
-  
-  # Ensure a picture is being submitted
-  # validates_attachment_presence(:avatar)
-  # validates_attachment_size :avatar, :less_than => 5.megabytes  
-  # validates_attachment_content_type :avatar, :content_type => ['image/jpeg']
-  
+ 
   # The default way items are ordered/presented
   default_scope :order => 'extension'
   
