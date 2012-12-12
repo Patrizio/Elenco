@@ -8,7 +8,7 @@ class Employee < ActiveRecord::Base
   # Validate the following fields and their specific requirements 
   validates_presence_of :firstname, :lastname, :title, :department, :email
   
-  validates :extension, :uniqueness => true, :numericality => true, :length => { :is => 4 }, :allow_blank => true
+  validates :extension, :uniqueness => true, :numericality => true, :allow_blank => true
   validates :mobile, :uniqueness => true, :allow_blank => true
   
   # Each employee has a profile picture
