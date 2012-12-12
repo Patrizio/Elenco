@@ -57,21 +57,21 @@ td.field_label {
 	display: block;
 }
 #profile h1 {
-	font-size: 25px;
-	padding-bottom: 15px;
+	font-size: x-large;
+	padding-bottom: 7px;
 	margin-bottom: 7px;
-	border-bottom: 2px dotted grey;
 }
 #profile #title {
 	color: grey;
+	
 }
 #profile-body h2 {
 	color: darkorange;
 	text-align: right;
-	font-size: 20px;
+	font-size: large;
 	padding-bottom: 0px;
 	margin-bottom: 5px;
-	border-bottom: 1px dotted grey;
+	border-bottom: 1px solid grey;
 }
 #profile-body {
 	margin-bottom: 0px;
@@ -91,6 +91,17 @@ td.field_label {
 
 .add_contact {
 	text-align: right;
+}
+
+
+.edit_employee {
+ 	bottom:0;
+  position:fixed;
+  z-index:150;
+  _position:absolute;
+  _top:expression(eval(document.documentElement.scrollTop+
+      (document.documentElement.clientHeight-this.offsetHeight)));
+  height:35px;
 }
 
 #company_info .company_name {
