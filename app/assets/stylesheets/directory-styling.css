@@ -99,7 +99,7 @@ td.field_label {
 	cursor: pointer;
 	position: relative;
 	display: block;
-	background-color: lightgrey;
+	background-color: #fff;
 	font-size: large;
 	text-transform: uppercase;
 	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;	
