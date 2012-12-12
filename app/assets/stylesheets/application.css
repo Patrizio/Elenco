@@ -6,3 +6,8 @@
  *= require_tree . 
  *= require jquery.fancybox
 */
+
+body {
+	background-image: url('bg_grain_200x200.png');
+	background-repeat: repeat;
+}
