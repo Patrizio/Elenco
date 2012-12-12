@@ -15,8 +15,6 @@ $(document).ready(function () {
 			'transitionOut'	: 'none', 
 			'overlayShow'	: true,
 			'scrolling'		: false,
-			'height'		: 550,
-			'width'			: 450,
 			'autoDimensions': true
     	})
 	});
