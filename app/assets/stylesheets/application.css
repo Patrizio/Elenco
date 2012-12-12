@@ -10,4 +10,5 @@
 body {
 	background-image: url('bg_grain_200x200.png');
 	background-repeat: repeat;
+	font: normal 100% arial, verdana, helvetica, sans-serif;
 }
