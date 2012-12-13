@@ -95,13 +95,9 @@ td.field_label {
 
 
 .edit_employee {
- 	bottom:0;
-  position:fixed;
-  z-index:150;
-  _position:absolute;
-  _top:expression(eval(document.documentElement.scrollTop+
-      (document.documentElement.clientHeight-this.offsetHeight)));
-  height:35px;
+ 	bottom: 0;
+  position: relative;
+ 
 }
 
 #company_info .company_name {
