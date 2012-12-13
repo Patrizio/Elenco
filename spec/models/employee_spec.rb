@@ -6,8 +6,7 @@ describe Employee do
   
   it { should have(1).error_on(:firstname) }
   it { should have(1).error_on(:lastname) }
-  it { should have(1).error_on(:title) }
-  it { should have(1).error_on(:department) }
+  it { should have(1).error_on(:extension) }
   it { should have(1).error_on(:email) }
   
   context "after fabrication" do
@@ -21,7 +20,7 @@ describe Employee do
   describe ".fullname" do
     
     it "should generate a fullname based on first and last name" do
-      @employee = Fabricate(:employee)
+      @employee = Fabricate.build(:employee)
       
       fullname = @employee.fullname
 
@@ -36,7 +35,7 @@ describe Employee do
 
   describe "#search_significant_fields" do
     
-    before :all do
+    before :all do      
       @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :extension => 9125, :department => 'Marketing', :email => 'p.beeker@stayokay.com', :skill_list => 'ruby, excel')
       @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :extension => 9123, :department => 'Marketing', :email => 'm.vantijn@stayokay.com',:skill_list => 'excel')
       @kunto = Fabricate(:employee, :firstname => 'Kunto', :lastname => 'Wibisono', :extension => 9182, :department => 'ICT', :email => 'k.wibisono@stayokay.com', :skill_list => 'excel')
