@@ -88,6 +88,14 @@ describe Employee do
       results.should_not include(@kunto, @marieke)
     end
     
+    it "should return employees with partial word of a skill is entered" do
+      results = Employee.search_significant_fields('rub')
+
+      results.should include(@patrick)
+      results.should_not include(@kunto, @marieke)
+    end
+    
+    
     it "should still return an employee by extension" do
       results = Employee.search_significant_fields('9123')
       
