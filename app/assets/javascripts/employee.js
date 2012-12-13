@@ -14,8 +14,9 @@ $(document).ready(function () {
 			'transitionIn'	: 'none',
 			'transitionOut'	: 'none', 
 			'overlayShow'	: true,
-			'scrolling'		: false,
-			'autoDimensions': true
+			'scrolling'		: 'auto',
+			'height': 400,
+			'width' : 500
     	})
 	});
 	// what should happen when interacting with the search-field
