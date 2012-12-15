@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121202104039) do
+ActiveRecord::Schema.define(:version => 20121215204419) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -27,11 +27,21 @@ ActiveRecord::Schema.define(:version => 20121202104039) do
     t.string   "po_box"
   end
 
+  create_table "departments", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "extention"
+    t.integer  "company_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "departments", ["company_id"], :name => "index_departments_on_companies_id"
+
   create_table "employees", :force => true do |t|
     t.string   "firstname"
     t.string   "lastname"
     t.string   "title"
-    t.string   "department"
     t.integer  "extension"
     t.string   "mobile"
     t.datetime "created_at",          :null => false
