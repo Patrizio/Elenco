@@ -1,5 +1,21 @@
 require 'spec_helper'
 
 describe Department do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  it { should_not be_valid }
+  
+  it { should have(1).error_on(:name) }
+  it { should have(1).error_on(:email) }
+  it { should have(1).error_on(:extension) }
+
+  
+  context "after fabrication" do
+    
+    subject { Fabricate(:department) }
+    
+    it { should be_valid }
+    
+  end
+
 end
+
