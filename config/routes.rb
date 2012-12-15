@@ -5,6 +5,7 @@ Elenco::Application.routes.draw do
   # includes the locale parameter in the url structure
   scope "/:locale" do
     resources :companies do
+      resources :departments
       resources :employees
     end
   end
