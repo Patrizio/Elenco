@@ -1,6 +1,6 @@
 class Department < ActiveRecord::Base
-  belongs_to :companies
-  attr_accessible :email, :extention, :name
+  belongs_to :company
+  attr_accessible :email, :extension, :name
   
   validates_presence_of :name, :extension, :email
   
