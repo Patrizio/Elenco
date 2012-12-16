@@ -2,7 +2,8 @@ class DepartmentsController < ApplicationController
   # GET /departments
   # GET /departments.json
   def index
-    @departments = Department.all
+    @company = Company.find(params[:company_id])
+    @departments = @company.departments
 
     respond_to do |format|
       format.html # index.html.erb
@@ -20,7 +21,8 @@ class DepartmentsController < ApplicationController
   end
 
   def new
-    @department = Department.new
+    @company = Company.find(params[:company_id])
+    @department = @company.departments.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -33,11 +35,12 @@ class DepartmentsController < ApplicationController
   end
 
   def create
-    @department = Department.new(params[:department])
+    @company = Company.find(params[:company_id])
+    @department = @company.departments.new(params[:department])
 
     respond_to do |format|
       if @department.save
-        format.html { redirect_to @department, notice: 'Department was successfully created.' }
+        format.html { redirect_to (company_departments_path, notice: 'Department was successfully created.' ) }
         format.json { render json: @department, status: :created, location: @department }
       else
         format.html { render action: "new" }

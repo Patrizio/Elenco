@@ -1,5 +1,20 @@
+%h1=t('.show_all_departments')
 
-%h1 Listing departments
+-@departments.each do |department|
+	%div{:href => "#" }
+		%span
+			= t('.department')
+		%span
+			= t('.email')
+		%span
+			= t('.extension')
+	
+	%div{:href => "#" }
+		%span
+			= department.name
+		%span
+			= department.email
+		%span
+			= department.extension
 
-
-= link_to 'New Department', new_department_path
+= link_to t('.new_department'), new_company_department_path

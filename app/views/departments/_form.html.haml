@@ -1,5 +1,5 @@
 = form_for [@company, @department], :html => { :multipart => true } do |f|
-	- if @employee.errors.any?
+	- if @department.errors.any?
 		#error_explanation
 			%h2= t('activerecord.errors.template.body')
 
@@ -7,5 +7,13 @@
 			- @employee.errors.full_messages.each do |msg|
 				%li= msg
 	.field
-		= f.label t("departments.name")
+		= f.label t("departments.department")
 		= f.text_field :name
+	.field
+		= f.label t("departments.email")
+		= f.text_field :email
+	.field
+		= f.label t("departments.extension")
+		= f.text_field :extension
+	.actions
+		= f.submit

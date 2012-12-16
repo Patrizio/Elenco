@@ -1,4 +1,4 @@
 nl:
-  activerecord:
-    models:
+  employees:
+    index:
       employee: Medewerker

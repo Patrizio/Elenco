@@ -1,0 +1,5 @@
+nl:
+  departments:
+    index:
+      show_all_departments: "All afdelingen"
+      new_department: "Nieuwe afdeling"
