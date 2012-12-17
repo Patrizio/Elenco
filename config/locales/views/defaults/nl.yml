@@ -6,6 +6,10 @@ nl:
     
     placeholder_label: "Zoek Medewerker..."
     
+    edit: 'Bewerk'
+    back: 'Terug'
+    show: 'Toon'
+    
     employees:
         firstname: "Voornaam"
         lastname: "Achternaam"

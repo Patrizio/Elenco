@@ -1,0 +1,18 @@
+%p#notice=notice
+
+%h1= t('.show_department')
+.detail
+	%div
+		= t('departments.department')
+		= @department.name
+	%div
+		= t('departments.email')
+		= @department.email
+	%div
+		= t('departments.extension')
+		= @department.extension
+%div
+	%span
+		= link_to t('edit'), :controller => "departments", :action => "edit", :id => @department
+		|
+		= link_to t('back'), company_departments_path

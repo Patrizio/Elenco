@@ -12,6 +12,7 @@ class DepartmentsController < ApplicationController
   end
 
   def show
+    @company = Company.find(params[:company_id])
     @department = Department.find(params[:id])
 
     respond_to do |format|

@@ -1,5 +1,7 @@
 nl:
   departments:
+    show:
+      show_department: "Toon afdeling"
     index:
       show_all_departments: "All afdelingen"
       new_department: "Nieuwe afdeling"

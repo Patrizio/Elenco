@@ -3,21 +3,27 @@
 
 %h1=t('.show_all_departments')
 
--@departments.each do |department|
-	%div{:href => "#" }
-		%span
+%table
+	%tr
+		%th
 			= t('.department')
-		%span
+		%th
 			= t('.email')
-		%span
+		%th
 			= t('.extension')
-	
-	%div{:href => "#" }
-		%span
-			= department.name
-		%span
-			= department.email
-		%span
-			= department.extension
+			
+	-@departments.each do |department|
+		%tr{:href => "#" }
+			%td
+				= department.name
+			%td
+				= department.email
+			%td
+				= department.extension
+			%td
+				= link_to t('show'), :controller => "departments", :action => "show", :id => department
+			%td
+				= link_to t('edit'), :controller => "departments", :action => "edit", :id => department
+		
 
 = link_to t('.new_department'), new_company_department_path
