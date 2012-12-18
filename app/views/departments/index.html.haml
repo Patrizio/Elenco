@@ -24,6 +24,7 @@
 				= link_to t('show'), :controller => "departments", :action => "show", :id => department
 			%td
 				= link_to t('edit'), :controller => "departments", :action => "edit", :id => department
-		
+			%td
+				= link_to t('destroy'), company_department_path(@company,department),:confirm => t("ask-for-confirmation"), :method => :delete
 
 = link_to t('.new_department'), new_company_department_path

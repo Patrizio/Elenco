@@ -69,7 +69,7 @@ class DepartmentsController < ApplicationController
     @department.destroy
 
     respond_to do |format|
-      format.html { redirect_to departments_url }
+      format.html { redirect_to company_departments_url }
       format.json { head :ok }
     end
   end
