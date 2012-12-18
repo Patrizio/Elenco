@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @department
+= link_to 'Show', :controller => "departments", :action => "show", :id => @department
 |
 = link_to 'Back', company_departments_path

@@ -32,6 +32,7 @@ class DepartmentsController < ApplicationController
   end
 
   def edit
+    @company = Company.find(params[:company_id])
     @department = Department.find(params[:id])
   end
 
@@ -51,11 +52,12 @@ class DepartmentsController < ApplicationController
   end
 
   def update
-    @department = Department.find(params[:id])
+    @company = Company.find(params[:company_id])
+    @department = @company.departments.find(params[:id])
 
     respond_to do |format|
       if @department.update_attributes(params[:department])
-        format.html { redirect_to @department, notice: 'department was successfully updated.' }
+        format.html { redirect_to (company_department_path), :notice => t("activerecord.notice.update", :model => @department.class.model_name.human) }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
