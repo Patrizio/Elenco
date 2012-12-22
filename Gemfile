@@ -16,6 +16,8 @@ group :assets do
    gem 'uglifier'
 end
 
+gem 'pry-rails', :group => :development
+
 # Deploy with Capistrano
 gem 'capistrano'
 
