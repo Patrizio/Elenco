@@ -4,6 +4,8 @@
   <tr>
     <th>Name</th>
 	  <th>Subdomain</th>
+	  <th></th>
+	  <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,7 +13,7 @@
 
 <% @companies.each do |company| %>
   <tr>
-    <td><%= company.name %></td>
+    <td><%= link_to company.name, company_employees_path(company) %></td>
 	  <td><%= company.subdomain %></td>
     <td><%= link_to 'Departments', company_departments_path(company) %></td>
     <td><%= link_to 'Show', company %></td>
