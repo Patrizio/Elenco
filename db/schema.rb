@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121223112051) do
+ActiveRecord::Schema.define(:version => 20121223155125) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20121223112051) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "email"
+    t.integer  "department_id"
   end
 
   create_table "taggings", :force => true do |t|
