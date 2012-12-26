@@ -7,9 +7,9 @@ class RemoveFieldsFromDepartments < ActiveRecord::Migration
   end
 
   def down
-    add_column :departments, :name
-    add_column :departments, :email
-    add_column :departments, :extension
-    add_column :departments, :employee_id
+    add_column :departments, :name, :string
+    add_column :departments, :email, :string
+    add_column :departments, :extension, :string
+    add_column :departments, :employee_id, :integer
   end
 end
