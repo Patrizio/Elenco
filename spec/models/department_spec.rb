@@ -16,6 +16,8 @@ describe Department do
     it { should be_valid }
     
   end
+  
+  
 
 end
 

@@ -8,8 +8,7 @@ describe Employee do
   it { should have(1).error_on(:lastname) }
   it { should have(1).error_on(:extension) }
   it { should have(1).error_on(:email) }
-  it { should have(1).error_on(:department) }
-  
+    
   context "after fabrication" do
     
     subject { Fabricate.build(:employee) }
