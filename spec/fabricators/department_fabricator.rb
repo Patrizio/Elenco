@@ -1,5 +1,4 @@
 Fabricator(:department) do
-  name { Faker::Company.name }
-  email { Faker::Internet.email }
-  extension { sequence(:extension, 1111) }
+  company
+  company_id { Fabricate.sequence }
 end
