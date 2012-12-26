@@ -14,27 +14,24 @@ describe Company do
   
   context "after fabrication" do
     
-    subject { Fabricate(:company) }
+    subject { Fabricate.build(:company) }
     
     it { should be_valid }
     
   end
  
- 
-  describe "#test_subdomain" do
-    
-    before :all do
-      @company = Fabricate.build(:company)
+  describe "Has a usable subdomain value" do 
+        
+    it "should be unique" do
+      company1 = Fabricate(:company, :subdomain => "abc")
+      company2 = Fabricate.build(:company, :subdomain => "abc")
+      company2.should_not be_valid
+      company2.should have(1).error_on(:subdomain)
     end
- 
-    it "should have an unique subdomain name" do
-      c = Fabricate.build(:company, :subdomain => @company.subdomain)
-      c.should_not be_valid
-    end
-      
-    it "should have only characters for a subdomain" do
-      @company.subdomain = "domainwithstrangecharacters@!"
-      @company.should_not be_valid
+        
+    it "should have only characters" do
+      subject.subdomain = "ab@!"
+      subject.should_not be_valid
     end
     
   end
