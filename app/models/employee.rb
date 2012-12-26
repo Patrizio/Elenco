@@ -1,6 +1,8 @@
 class Employee < ActiveRecord::Base
   
+  belongs_to :company
   belongs_to :department
+  
   
   # Protect the following attributes from outside access
   attr_protected :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
