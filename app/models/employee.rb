@@ -7,9 +7,9 @@ class Employee < ActiveRecord::Base
   attr_protected :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
   
   # Validate the following fields and their specific requirements 
+  # TODO: Check uniqueness on Company level (email, extension, mobile)
   validates_presence_of :firstname, :lastname, :email
-  validates :extension, :uniqueness => true, :numericality => true
-  validates :mobile, :uniqueness => true, :allow_blank => true
+  validates :extension, :presence => true, :numericality => true
   
   # Each employee has a profile picture
   has_attached_file :avatar, 

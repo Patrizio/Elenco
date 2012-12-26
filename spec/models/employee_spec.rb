@@ -6,8 +6,8 @@ describe Employee do
   
   it { should validate_presence_of(:firstname) }
   it { should validate_presence_of(:lastname) }
-  it { should validate_uniqueness_of(:extension) }
-  it { should validate_uniqueness_of(:email) }
+  it { should validate_presence_of(:extension) }
+  it { should validate_presence_of(:email) }
     
   context "after fabrication" do
     
