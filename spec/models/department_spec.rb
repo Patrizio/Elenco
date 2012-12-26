@@ -11,7 +11,7 @@ describe Department do
   
   context "after fabrication" do
     
-    subject { Fabricate(:department) }
+    subject { Fabricate.build(:department) }
     
     it { should be_valid }
     
