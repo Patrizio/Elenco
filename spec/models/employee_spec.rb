@@ -4,10 +4,10 @@ describe Employee do
   
   it { should_not be_valid }
   
-  it { should have(1).error_on(:firstname) }
-  it { should have(1).error_on(:lastname) }
-  it { should have(1).error_on(:extension) }
-  it { should have(1).error_on(:email) }
+  it { should validate_presence_of(:firstname) }
+  it { should validate_presence_of(:lastname) }
+  it { should validate_uniqueness_of(:extension) }
+  it { should validate_uniqueness_of(:email) }
     
   context "after fabrication" do
     
@@ -16,6 +16,7 @@ describe Employee do
     it { should be_valid }
     
   end
+
 
   describe ".fullname" do
     
