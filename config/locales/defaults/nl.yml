@@ -10,7 +10,7 @@ nl:
   ask-for-confirmation: "Weet je het zeker?"
 
   cancel: "Annuleer"
-      
+
   date:
     formats:
       default: "%d/%m/%Y"
@@ -194,4 +194,3 @@ nl:
     notice:
         create: "%{model} succesvol aangemaakt."
         update: "%{model} succesvol opgeslagen."
-        
