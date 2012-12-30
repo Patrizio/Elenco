@@ -5,6 +5,7 @@
     <th>Name</th>
 	  <th>Subdomain</th>
 	  <th></th>
+    <th></th>
 	  <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
   <tr>
     <td><%= link_to company.name, company_employees_path(company) %></td>
 	  <td><%= company.subdomain %></td>
+    <td><%= link_to 'Employees', company_employees_path(company) %></td>
     <td><%= link_to 'Departments', company_departments_path(company) %></td>
     <td><%= link_to 'Show', company %></td>
     <td><%= link_to 'Edit', edit_company_path(company) %></td>
