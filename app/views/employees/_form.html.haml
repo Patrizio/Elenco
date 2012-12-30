@@ -16,9 +16,8 @@
 		= f.label t("employees.title")
 		= f.text_field :title
 	.field
-		= fields_for :department do |dep|
-			= dep.label t("employees.department")
-			= dep.collection_select :employee, @company.departments, :id, :name, :include_blank => true, :selected => @employee.department_id
+		= f.label t("employees.department")
+		= f.collection_select :department_id, @company.departments, :id, :name, :include_blank => true, :selected => @employee.department_id
 	.field
 		= f.label t("employees.extension")
 		= f.text_field :extension

@@ -6,7 +6,7 @@
 	
 		%h1= @employee.fullname
 		%span#title
-			= @employee.department.name
+			= @employee.department.name if @employee.department
 			>
 			= @employee.title.capitalize
 	
