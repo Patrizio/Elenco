@@ -16,11 +16,6 @@ group :assets do
    gem 'uglifier'
 end
 
-gem 'pry-rails', :group => :development
-
-# Deploy with Capistrano
-gem 'capistrano'
-
 group :development, :test do
 	gem 'rspec-rails'
 	gem 'fabrication'
@@ -31,8 +26,7 @@ group :development, :test do
  	gem 'shoulda-matchers'
 end
 
-#group :production do
-#  gem 'execjs'
-#  gem 'therubyracer'
-#  gem 'mysql2'
-#end
+group :development do
+  gem 'guard'
+  gem 'pry-rails'
+end
