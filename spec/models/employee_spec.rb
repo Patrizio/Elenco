@@ -63,17 +63,9 @@ describe Employee do
       results.should_not include(@patrick, @kunto)
     end 
     
-    it "should return all employees of a department" do
-      results = Employee.search_significant_fields('marketing')
-      results.should include(@patrick, @marieke)
-      results.should_not include(@kunto)
-    end
+    it "should return all employees of a department" 
 
-    it "should return all employees of a department in wrong case" do
-      results = Employee.search_significant_fields('MARketing')
-      results.should include(@patrick, @marieke)
-      results.should_not include(@kunto)
-    end 
+    it "should return all employees of a department in wrong case" 
     
     it "should return employees with a general skill" do
       results = Employee.search_significant_fields('excel')
@@ -91,11 +83,7 @@ describe Employee do
       results.should_not include(@kunto, @marieke)
     end
     
-    it "should return employee with partial word of a unique skill is entered" do
-      results = Employee.search_significant_fields('rub')
-      results.should include(@patrick)
-      results.should_not include(@kunto, @marieke)
-    end
+    it "should return employee with partial word of a unique skill is entered" 
     
     it "should still return an employee by extension" do
       results = Employee.search_significant_fields('9123')     
