@@ -28,5 +28,7 @@ end
 
 group :development do
   gem 'guard'
+  gem 'guard-spin'
+  gem 'guard-rspec'
   gem 'pry-rails'
 end
