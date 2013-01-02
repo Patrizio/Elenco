@@ -36,70 +36,69 @@ describe Employee do
 
   describe "#search_significant_fields" do
     
-    before :all do      
-      @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :extension => 9125, :department => 'Marketing', :email => 'p.beeker@stayokay.com', :skill_list => 'ruby, excel')
-      @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :extension => 9123, :department => 'Marketing', :email => 'm.vantijn@stayokay.com',:skill_list => 'excel')
-      @kunto = Fabricate(:employee, :firstname => 'Kunto', :lastname => 'Wibisono', :extension => 9182, :department => 'ICT', :email => 'k.wibisono@stayokay.com', :skill_list => 'excel')
+    before :all do
+      my_company = Fabricate(:company, :subdomain => "unique")
+      marketing_department = my_company.departments.create!(:name => "marketing", :email => "marketing@stayokay.com", :extension => 1234)
+      tech_department = my_company.departments.create!(:name => "tech", :email => "ict@stayokay.com", :extension => 4321)
+      @patrick = Fabricate(:employee, :firstname => 'Patrick', :lastname => 'Beeker', :extension => 9125, :department => marketing_department, :email => 'p.beeker@stayokay.com', :skill_list => 'ruby, excel', :company => my_company)
+      @marieke = Fabricate(:employee, :firstname => 'Marieke', :lastname => 'Van Tijn', :extension => 9123, :department => marketing_department, :email => 'm.vantijn@stayokay.com',:skill_list => 'excel', :company => my_company)
+      @kunto = Fabricate(:employee, :firstname => 'Kunto', :lastname => 'Wibisono', :extension => 9182, :department => tech_department, :email => 'k.wibisono@stayokay.com', :skill_list => 'excel', :company => my_company)
     end
     
     it "should search by firstname" do
       results = Employee.search_significant_fields('Patrick')
-      
       results.should include(@patrick)
       results.should_not include(@marieke, @kunto)
     end
     
     it "should still return an employee if the firstname's case is not correct" do
       results = Employee.search_significant_fields('PATRICK')
-      
       results.should include(@patrick)
       results.should_not include(@marieke, @kunto)
     end
     
     it "should search by lastname" do
       results = Employee.search_significant_fields('Van Tijn')
-
       results.should include(@marieke)
       results.should_not include(@patrick, @kunto)
     end 
     
     it "should return all employees of a department" do
       results = Employee.search_significant_fields('marketing')
-
       results.should include(@patrick, @marieke)
       results.should_not include(@kunto)
-    end    
+    end
+
+     it "should return all employees of a department in wrong case" do
+      results = Employee.search_significant_fields('MARketing')
+      results.should include(@patrick, @marieke)
+      results.should_not include(@kunto)
+    end 
     
     it "should return employees with a general skill" do
       results = Employee.search_significant_fields('excel')
-
       results.should include(@marieke, @patrick, @kunto)
     end
     
     it "should still return employees with a general skill when the case is not correct" do
       results = Employee.search_significant_fields('eXcel')
-
       results.should include(@marieke, @patrick, @kunto)
     end  
     
-    it "should return employees with a relative unique skill" do
+    it "should return employees with an unique skill" do
       results = Employee.search_significant_fields('ruby')
-
       results.should include(@patrick)
       results.should_not include(@kunto, @marieke)
     end
     
-    it "should return employees with partial word of a skill is entered" do
+    it "should return employee with partial word of a unique skill is entered" do
       results = Employee.search_significant_fields('rub')
-
       results.should include(@patrick)
       results.should_not include(@kunto, @marieke)
     end
-    
     
     it "should still return an employee by extension" do
-      results = Employee.search_significant_fields('9123')
-      
+      results = Employee.search_significant_fields('9123')     
       results.should include(@marieke)
       results.should_not include(@patrick, @kunto)
     end

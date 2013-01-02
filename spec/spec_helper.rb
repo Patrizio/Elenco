@@ -10,7 +10,7 @@ RSpec.configure do |config|
   config.mock_with :rspec
 
   config.before :suite do
-    DatabaseCleaner.strategy = :truncation
+  	DatabaseCleaner.strategy = :truncation
   end
 
   config.after :all do
