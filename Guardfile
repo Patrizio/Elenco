@@ -1,5 +1,5 @@
 # Start the spin server with RSpec support, and report time for each run
-guard 'spin', :cli => "--time --rspec --cucumber" do
+guard 'spin', :cli => "--time --rspec" do
   # Spin itself
   watch('config/application.rb')
   watch('config/environment.rb')

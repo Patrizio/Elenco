@@ -27,6 +27,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'rb-fsevent', '~> 0.9.1'
   gem 'guard'
   gem 'guard-spin'
   gem 'guard-rspec'
