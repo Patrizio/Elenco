@@ -69,7 +69,7 @@ describe Employee do
       results.should_not include(@kunto)
     end
 
-     it "should return all employees of a department in wrong case" do
+    it "should return all employees of a department in wrong case" do
       results = Employee.search_significant_fields('MARketing')
       results.should include(@patrick, @marieke)
       results.should_not include(@kunto)
