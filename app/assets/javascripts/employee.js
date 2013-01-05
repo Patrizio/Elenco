@@ -8,16 +8,9 @@ $(document).ready(function () {
   	});
 	// Each employee when clicked should be displayed in a particulair way 
 	$(".employee").live('click', function () {
-		$.fancybox({
-        	type: "iframe",
-			href: $(this).attr('href'),
-			'transitionIn'	: 'none',
-			'transitionOut'	: 'none', 
-			'overlayShow'	: true,
-			'scrolling'		: 'auto',
-			'height': 400,
-			'width' : 500
-    	})
+		$.getJSON($(this).attr('href'), function(data) {
+			console.log(data);
+		});
 	});
 	// what should happen when interacting with the search-field
 	$("#search").bind({
