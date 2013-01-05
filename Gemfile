@@ -6,7 +6,7 @@ gem 'jquery-rails'
 gem 'paperclip'
 gem 'rack-google_analytics'
 gem 'acts-as-taggable-on'
-gem 'pg'
+gem 'mysql2'
 
 # Gems used only for assets and not required
 # in production environments by default.
