@@ -109,7 +109,11 @@ td.field_label {
 	background-color: #fff;
 	font-size: large;
 	text-transform: uppercase;
-	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;	
+	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+	-moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 	
 }
 #company_details {
 	padding: 3px 10px;
