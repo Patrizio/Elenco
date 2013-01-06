@@ -6,12 +6,6 @@ $(document).ready(function () {
 	$(".company_name").click(function() {
     	$("#company_details").slideToggle(100);
   	});
-	// Each employee when clicked should be displayed in a particulair way 
-	$(".employee").live('click', function () {
-		$.getJSON($(this).attr('href'), function(data) {
-			console.log(data);
-		});
-	});
 	// what should happen when interacting with the search-field
 	$("#search").bind({
 		keyup: function () {
