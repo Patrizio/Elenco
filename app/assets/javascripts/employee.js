@@ -6,6 +6,19 @@ $(document).ready(function () {
 	$(".company_name").click(function() {
     	$("#company_details").slideToggle(100);
   	});
+  	// Each employee when clicked should be displayed in a particulair way 
+ 	$(".employee").live('click', function () {
+		$.fancybox({
+        	type: "iframe",
+			href: $(this).attr('href'),
+			'transitionIn'	: 'none',
+			'transitionOut'	: 'none', 
+			'overlayShow'	: true,
+			'scrolling'		: 'auto',
+			'height': 400,
+			'width' : 500
+    	})
+ 	});
 	// what should happen when interacting with the search-field
 	$("#search").bind({
 		keyup: function () {
