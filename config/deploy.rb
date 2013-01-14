@@ -92,6 +92,7 @@ namespace :deploy do
   desc "Additional Symlinks ( database.yml, etc. )"
   task :additional_symlink, :roles => :app do
     run "ln -sf #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -sf ../../../shared/system #{release_path}/public/system"
   end
 end
 
