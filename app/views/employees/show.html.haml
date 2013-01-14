@@ -8,7 +8,7 @@
 		%span#title
 			= @employee.department.name if @employee.department
 			>
-			= @employee.title.capitalize
+			= @employee.title.try(:capitalize)
 	
 	#profile-body
 		.chapter
