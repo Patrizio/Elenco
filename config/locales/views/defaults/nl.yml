@@ -11,6 +11,7 @@ nl:
     employees:
         firstname: "Voornaam"
         lastname: "Achternaam"
+        preposition: "Tussenvoegsel"
         fullname: "Naam"
         title: "Functie"
         department: "Afdeling"
