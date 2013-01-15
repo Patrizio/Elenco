@@ -4,7 +4,7 @@ namespace :db do
    
     require "csv"
     
-    CSV.foreach("db/stayokay-employees.csv", 
+    CSV.foreach("db/saatchi-employees.csv", 
     				:headers           => true,
                   	:header_converters => :symbol,
                   	:col_sep => ',' ) do |row|
@@ -14,7 +14,7 @@ namespace :db do
         	:preposition => row[2],
         	:lastname => row[3],
         	:email => row[4],
-        	:company_id => 2
+        	:company_id => 1
       	)    
     end
     
