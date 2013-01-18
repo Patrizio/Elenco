@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130114215350) do
+ActiveRecord::Schema.define(:version => 20130118100736) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -55,6 +55,9 @@ ActiveRecord::Schema.define(:version => 20130114215350) do
     t.integer  "company_id"
     t.string   "preposition"
   end
+
+  add_index "employees", ["company_id"], :name => "index_employees_on_company"
+  add_index "employees", ["department_id"], :name => "index_employees_on_department"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
