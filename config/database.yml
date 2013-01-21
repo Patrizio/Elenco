@@ -23,6 +23,6 @@ test:
 production:
   adapter: mysql2
   host: ny.railshoster.de
-  database: db_53561994n1
-  username: user53561994n1
-  password: QB0RAfwj
+  database: db_53561994n2
+  username: user53561994n2
+  password: fVMTkoQ2
