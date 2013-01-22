@@ -27,7 +27,7 @@ $(document).ready(function () {
 					// empty searchvalue
 					$.get($("#employees_search").attr("action"), $("#employees_search").serialize(), null, "script");
 					return false;
-				} else if (searchStringLength >= 3) {
+				} else if (searchStringLength >= 2) {
 					// 3 or more characters in searchvalue
 					$.get($("#employees_search").attr("action"), $("#employees_search").serialize(), null, "script");
 					return false;
