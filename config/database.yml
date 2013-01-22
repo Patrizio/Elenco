@@ -23,6 +23,6 @@ test:
 production:
   adapter: mysql2
   host: ny.railshoster.de
-  database: db_53561994n2
-  username: user53561994n2
-  password: fVMTkoQ2
+  database: <%= ENV["DIGIDEX_PROD_DB_DATABASE"] %>
+  username: <%= ENV["DIGIDEX_PROD_DB_USERNAME"] %>
+  password: <%= ENV["DIGIDEX_PROD_DB_PASSWORD"] %>
