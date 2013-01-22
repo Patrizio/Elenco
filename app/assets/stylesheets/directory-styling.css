@@ -52,9 +52,8 @@ td.field_label {
 #profile-header {
 
 }
-#profile-picture {
+#pic {
 	float: right;
-	display: block;
 }
 #profile h1 {
 	font-size: x-large;
@@ -63,7 +62,12 @@ td.field_label {
 }
 #profile #title {
 	color: grey;
-	
+}
+#profile-body {
+	margin-top: 10px;
+	padding-top: 15px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
 #profile-body h2 {
 	color: darkorange;
@@ -73,10 +77,7 @@ td.field_label {
 	margin-bottom: 5px;
 	border-bottom: 1px solid grey;
 }
-#profile-body {
-	margin-bottom: 0px;
-	padding-bottom: 0px;
-}
+
 .chapter {
 	margin-bottom: 0px;
 	padding-bottom: 0px;
