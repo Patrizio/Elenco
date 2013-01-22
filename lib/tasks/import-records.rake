@@ -14,7 +14,7 @@ namespace :db do
         	:preposition => row[2],
         	:lastname => row[3],
         	:email => row[4],
-        	:company_id => 2
+        	:company_id => 1
       	)    
     end
     

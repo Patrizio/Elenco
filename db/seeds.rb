@@ -18,7 +18,7 @@ stayokay = Company.create({
 	:country => 'the Netherlands'})
 
 saatchi = Company.create({ 
-	:name => 'Saatchi & Saatchi AMS', 
+	:name => 'Saatchi & Saatchi', 
 	:subdomain => 'saatchi', 
 	:phone => '020-12345678',
 	:fax_number => '',
