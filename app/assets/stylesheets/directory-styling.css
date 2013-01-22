@@ -8,7 +8,7 @@
 }
 
 input[type=search] {
-	color: darkorange;
+	color: black;
 	text-align: left;
 	display: block;
 	font-size: large;
@@ -23,7 +23,7 @@ input[type=search] {
 	height: 35px;
 }
 .employee:hover {
-	background: darkorange;
+	background: lightgrey;
 	color: white;
 	cursor: pointer;
 }
@@ -106,7 +106,7 @@ td.field_label {
 	cursor: pointer;
 	position: relative;
 	display: block;
-	background-color: #fff;
+	background-color: lightgrey;
 	font-size: large;
 	text-transform: uppercase;
 	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
