@@ -23,7 +23,7 @@ class Employee < ActiveRecord::Base
   # Allow each employee to have tags of their skills
   acts_as_taggable_on :skills
  
-  # The default way items are ordered/presented
+  # The default order
   default_scope :order => 'extension'
   
   # Live search is performed on the columns specified here
