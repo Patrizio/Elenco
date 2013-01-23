@@ -17,8 +17,8 @@ class Employee < ActiveRecord::Base
   
   # Each employee has a profile picture
   has_attached_file :avatar, 
-                    :default_url => '/assets/profile-head.gif',
-                    :styles => { :small => "100x150" } 
+                    :default_url => '/assets/profile-head-100.png',
+                    :styles => { :small => "100x100" } 
                     
   # Allow each employee to have tags of their skills
   acts_as_taggable_on :skills
