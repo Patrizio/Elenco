@@ -42,7 +42,7 @@ class DepartmentsController < ApplicationController
 
     respond_to do |format|
       if @department.save
-        format.html { redirect_to(company_departments_path, :notice => t("activerecord.notice.create", :model => @department.class.model_name.human)) }
+        format.html { redirect_to(company_employees_path, :notice => t("activerecord.notice.create", :model => @department.class.model_name.human)) }
         format.json { render json: @department, status: :created, location: @department }
       else
         format.html { render action: "new" }
