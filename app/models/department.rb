@@ -5,7 +5,7 @@ class Department < ActiveRecord::Base
   
   attr_accessible :email, :extension, :name
   
-  validates_presence_of :name, :extension, :email, :company
+  validates_presence_of :name, :company
   
   
 end
