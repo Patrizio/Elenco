@@ -3,14 +3,17 @@
 #profile
 
 	#profile-header
+		#profile-picture= image_tag @employee.avatar.url(:small)
 	
 		%h1= @employee.fullname
+
 		%span#title
 			= @employee.department.name if @employee.department
 			>
 			= @employee.title.try(:capitalize)
+		
+			
 
-		%span#pic= image_tag @employee.avatar.url(:small)
 	#profile-body
 		.chapter
 			%h2= t('employees.contact-title')

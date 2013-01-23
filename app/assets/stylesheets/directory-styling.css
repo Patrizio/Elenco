@@ -50,10 +50,12 @@ td.field_label {
 }
 
 #profile-header {
-
+	min-height: 120px;
 }
-#pic {
-	float: right;
+#profile-picture {
+	float:right; 
+	margin: 0 0 15px 15px;
+	/* display: block;*/
 }
 #profile h1 {
 	font-size: x-large;
@@ -64,8 +66,6 @@ td.field_label {
 	color: grey;
 }
 #profile-body {
-	margin-top: 10px;
-	padding-top: 15px;
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 }
