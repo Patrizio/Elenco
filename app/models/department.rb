@@ -6,6 +6,6 @@ class Department < ActiveRecord::Base
   attr_accessible :email, :extension, :name
   
   validates_presence_of :name, :company
-  
+  validates_uniqueness_of :name, :scope => [:company_id]
   
 end
