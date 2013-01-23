@@ -27,8 +27,3 @@ nl:
         edit-profile: "Bewerk profiel"
         delete-profile: "Verwijder profiel"
         new-profile: "Nieuw profiel"
-
-    departments:
-        department: "Afdeling"
-        email: "E-mail"
-        extension: "Intern nummer"

@@ -1,5 +1,8 @@
 nl:
   departments:
+    department: "Afdeling"
+    email: "E-mail"
+    extension: "Intern nummer"
     show:
       show_department: "Toon afdeling"
     index:

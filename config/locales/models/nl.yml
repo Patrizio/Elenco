@@ -1,4 +1,8 @@
 nl:
+  activerecord:
+      models:
+        department: "Afdeling"
+        employee: "Medewerker"
   employees:
     index:
       employee: Medewerker

@@ -26,5 +26,9 @@
 %div#employees
 	= render 'employees'
 
-%span.add_contact
-	= button_to( "Add Contact", new_company_employee_path, :method => :get )	
+#additional-links
+	%span.add_contact
+		= link_to( t('departments.index.new_department'), new_company_department_path, :method => :get )
+	|	
+	%span.add_contact
+		= link_to( t('employees.new-profile'), new_company_employee_path, :method => :get )

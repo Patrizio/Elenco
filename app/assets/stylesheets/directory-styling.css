@@ -90,15 +90,14 @@ td.field_label {
 	color: grey;
 }
 
-.add_contact {
-	text-align: right;
+#additional-links {
+	float: right;
 }
 
 
 .edit_employee {
- 	bottom: 0;
-  position: relative;
- 
+	bottom: 0;
+  	position: relative;
 }
 
 #company_info .company_name {
