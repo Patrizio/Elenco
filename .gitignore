@@ -3,4 +3,5 @@ db/*.sqlite3
 log/*.log
 tmp/
 public/system/
-lib/tasks/saatchi.csv
+db/saatchi-employees.csv
+db/stayokay-employees.csv
