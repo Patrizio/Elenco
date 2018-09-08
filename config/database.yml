@@ -4,25 +4,29 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: postgresql
-  host: localhost
-  database: digidex_development
-  username: 
-  password: 
+  # adapter: postgresql
+  # host: localhost
+  # database: digidex_development
+  adapter: sqlite3
+  database: db/development.sqlite3
+  username:
+  password:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter: postgresql
-  host: localhost
-  database: digidex_test
-  username: 
-  password: 
+  # adapter: postgresql
+  # host: localhost
+  # database: digidex_test
+  adapter: sqlite3
+  database: db/test.sqlite3
+  username:
+  password:
 
 production:
-  adapter: postgresql
-  host: ny.railshoster.de
-  database: <%= ENV["DIGIDEX_PROD_DB_DATABASE"] %>
-  username: <%= ENV["DIGIDEX_PROD_DB_USERNAME"] %>
-  password: <%= ENV["DIGIDEX_PROD_DB_PASSWORD"] %>
+  # adapter: postgresql
+  # host: ny.railshoster.de
+  # database: <%= ENV["DIGIDEX_PROD_DB_DATABASE"] %>
+  # username: <%= ENV["DIGIDEX_PROD_DB_USERNAME"] %>
+  # password: <%= ENV["DIGIDEX_PROD_DB_PASSWORD"] %>
