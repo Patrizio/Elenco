@@ -10,7 +10,7 @@ Elenco::Application.routes.draw do
     end
   end
 
-  match '/:locale' => "companies#index"
+  get '/:locale' => "companies#index"
   root :to => "pages#home"
   
   # The priority is based upon order of creation:

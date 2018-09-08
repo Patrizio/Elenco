@@ -1,6 +1,10 @@
 Elenco::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Log error messages when you accidentally call methods on nil
+  # config.whiny_nils = true
+  config.eager_load = false
+
   # The test environment is used exclusively to run your application's
   # test suite.  You never need to work with it otherwise.  Remember that
   # your test database is "scratch space" for the test suite and is wiped
@@ -34,5 +38,5 @@ Elenco::Application.configure do
   config.active_support.deprecation = :stderr
   
   # Raise exception on mass assignment protection for Active Record models
-  config.active_record.mass_assignment_sanitizer = :strict
+  #config.active_record.mass_assignment_sanitizer = :strict
 end
